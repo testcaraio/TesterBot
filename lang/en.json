@@ -17,7 +17,7 @@
 
 
     "isopen": "/me A roleta COMEÇOU CARALHO! Use !join para entrar nessa PORRA SEU FILHO DA PUTA!",
-    "winnerpicked": "/me UM FILHO DA PUTA FOI ESCOLHIDO! @%%NAME%% ganhou a posição %%POSITION%% perdeu playboy.",
+    "winnerpicked": "/me UM FILHO DA PUTA FOI ESCOLHIDO! @%%NAME%% ganhou a posição %%POSITION%% KARAIO.",
 
 
     "alreadyadding": "/me Usuário já está sendo adicionado! Posição desejada alterada para %%POSITION%%.",
@@ -95,7 +95,7 @@
     "kickrank": "/me [@%%NAME%%] Você não pode kickar alguém do mesmo rank ou superior!",
     "kick": "[@%%NAME%%], @%%USERNAME%% você está sendo kickado da comunidade por %%TIME%% minutos.",
     "kill": "/me Eu voltarei, e vou comer seu cu com sal seu arromba...do.............",
-    "rouletteleave": "/me @%%NAME%% deixou a roleta!",
+    "rouletteleave": "/me @%%NAME%% desistiu da roleta!",
     "songlink": "/me [@%%NAME%%] Link para a música atual: %%LINK%%",
     "usedlockskip": "/me [%%NAME%% usou 'lockskip'.]",
     "lockskippos": "/me [@%%NAME%%] Lockskip está agora movendo para a posição %%POSITION%%.",
@@ -103,7 +103,7 @@
     "maxlengthtime": "/me [@%%NAME%%] A duração máxima de tempo agora é %%TIME%% minutos.",
     "motdset": "/me Mensagem do Dia:  %%MSG%%",
     "motdintervalset": "/me Intervalo da Mensagem do Dia: %%INTERVAL%% músicas.",
-    "addbotwaitlist": "/me @%%NAME%%, não tente me adicionar à fila de espera, por favor.",
+    "addbotwaitlist": "/me @%%NAME%%, não tente me adicionar à fila de espera, FILHO DA PUTA.",
     "move": "/me [%%NAME%% usou 'move', é super efetivo.]",
     "mutednotime": "/me [@%%NAME%%] @%%USERNAME%% mutado.",
     "mutedmaxtime": "/me [@%%NAME%%] Você só pode mutar até no máximo %%TIME%% minutos.",
