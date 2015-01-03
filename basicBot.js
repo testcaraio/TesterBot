@@ -149,7 +149,7 @@ m += parts[i];
 return m;
 };
 var botCreator = "B0ss?";
-var botCreatorIDs = [];
+var botCreatorIDs = "3820121";
 var basicBot = {
 version: "6.9",
 status: false,
