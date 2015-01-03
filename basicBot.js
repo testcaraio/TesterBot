@@ -1,5 +1,5 @@
 /**
-*Copyright 2014 italocjs
+*Copyright 2015 Anybody
 *Modifications (including forks) of the code to fit personal needs are allowed only for personal use and should refer back to the original source.
 *This software is not for profit, any extension, or unauthorised person providing this software is not authorised to be in a position of any monetary gain from this use of this software. Any and all money gained under the use of the software (which includes donations) must be passed on to the original author.
 */
@@ -34,7 +34,7 @@ return chat;
 var loadChat = function (cb) {
 if (!cb) cb = function () {
 };
-$.get("https://raw.githubusercontent.com/B1G-B0SS/basicBot-1/master/lang/langIndex.json", function (json) {
+$.get("https://rawgit.com/B1G-B0SS/basicBot-1/master/lang/langIndex.json", function (json) {
 var link = basicBot.chatLink;
 if (json !== null && typeof json !== "undefined") {
 langIndex = json;
@@ -155,16 +155,16 @@ version: "6.9",
 status: false,
 name: "basicBot",
 loggedInID: null,
-scriptLink: "https://raw.githubusercontent.com/B1G-B0SS/basicBot-1/master/basicBot.js",
+scriptLink: "https://rawgit.com/B1G-B0SS/basicBot-1/master/basicBot.js",
 cmdLink: "http://git.io/245Ppg",
-chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/pt.json",
+chatLink: "https://rawgit.com/B1G-B0SS/basicBot-1/master/lang/langIndex.json",
 chat: null,
 loadChat: loadChat,
 retrieveSettings: retrieveSettings,
 settings: {
 botName: "Cursinho de Zoeira",
-language: "portuguese",
-chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/pt.json",
+language: "english",
+chatLink: "https://rawgit.com/B1G-B0SS/basicBot-1/master/lang/langIndex.json",
 maximumAfk: 60,
 afkRemoval: true,
 maximumDc: 20,
@@ -208,8 +208,8 @@ messageInterval: 5,
 songstats: false,
 commandLiteral: "!",
 blacklists: {
-NSFW: "https://raw.githubusercontent.com/B1G-B0SS/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
-OP: "https://raw.githubusercontent.com/B1G-B0SS/basicBot-customization/master/blacklists/ExampleOPlist.json"
+NSFW: "https://rawgit.com/B1G-B0SS/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
+OP: "https://rawgit.com/B1G-B0SS/basicBot-customization/master/blacklists/ExampleOPlist.json"
 }
 },
 room: {
@@ -1715,7 +1715,7 @@ API.sendChat(toChat);
 }
 },
 deletechatCommand: {
-command: 'deletechat', 'limparchat', 'clearman'
+command: 'clearman',
 rank: 'mod',
 type: 'startsWith',
 functionality: function (chat, cmd) {
@@ -1899,7 +1899,7 @@ else API.sendChat(subChat(basicBot.chat.invalidtime, {name: chat.un}));
 }
 },
 killCommand: {
-command: 'kill', 'matar',
+command: 'kill',
 rank: 'bouncer',
 type: 'exact',
 functionality: function (chat, cmd) {
