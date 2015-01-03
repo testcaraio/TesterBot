@@ -1,4 +1,4 @@
-comandos:
+Comandos:
 =========
 
 X especifique um numero
