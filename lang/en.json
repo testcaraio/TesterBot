@@ -20,15 +20,15 @@
     "winnerpicked": "/me UM FILHO DA PUTA FOI ESCOLHIDO! @%%NAME%% ganhou a posição %%POSITION%% KARAIO.",
 
 
-    "alreadyadding": "/me Usuário já está sendo adicionado! Posição desejada alterada para %%POSITION%%.",
-    "adding": "/me @%%NAME%% foi adicionado à fila. Posição atual: %%POSITION%%.",
+    "alreadyadding": "/me Usuário já está sendo adicionado PORRA! Posição desejada alterada para %%POSITION%%.",
+    "adding": "/me @%%NAME%% foi adicionado à porra da fila. Posição atual: %%POSITION%% nesse karaio.",
 
 
     "usernotfound": "/me Zé Bostola não encontrado.",
     "notdisconnected": "/me @%%NAME%% não caiu quando estive nesse caraio.",
     "noposition": "/me Última posição não reconhecida. A fila de espera precisa ser atualizada pelo menos uma vez para registrar posições.",
     "toolongago": "/me @%%NAME%%'s desconectou-se a muito tempo atrás PORRA, TÁ DE SACANAGEM NÉ KARAIO?: %%TIME%%.",
-    "valid": "/me @%%NAME%% caiu a %%TIME%% atrás e deve ter posição %%POSITION%%.",
+    "valid": "/me @%%NAME%% foi dar a bunda á %%TIME%% atrás e deve ter posição %%POSITION%% nessa caraia.",
 
 
     "warning1": "@%%NAME%%, você esteve inativo por %%TIME%%, responda dentro de 2 minutos ou você será removido da fila de espera.",
@@ -36,7 +36,7 @@
     "afkremove": "@%%NAME%%, você foi removido por estar inativo por %%TIME%%. Você teve a posição %%POSITION%%. Use o chat pelo menos uma vez em 1 hora se quiser tocar.",
 
 
-    "caps": "@%%NAME%%, desligue seu capslock, filho da puta.",
+    "caps": "@%%NAME%%, desligue seu capslock, filho da puta sem costumes.",
     "askskip": "@%%NAME%%, não peça para pular PORRA.",
     "spam": "/me @%%NAME%%, não faça spam, PORRA.",
     "roomadvertising": "@%%NAME%%, POSTA ESSE LINK, NO CU DA ARROMBADA DA TUA MÃE FILHO DA PUTA.",
