@@ -2,22 +2,22 @@
     
     "nodatafound": "Dados anteriores não encontrados nessa porra.",
     "retrievingdata": "Recuperando dados armazenados anteriormente. karaio",
-    "datarestored": "Dados armazenados anteriormente recuperados com êxito.",
-    "greyuser": "Apenas Seguranças ou superiores podem usar o chatbot.",
-    "bouncer": "O chatbot não pode mover pessoas na fila de espera quando usado por um bouncer.",
-    "online": "/me %%BOTNAME%% v%%VERSION%% online!",
+    "datarestored": "Dados armazenados anteriormente recuperados com êxito PORRAAAA.",
+    "greyuser": "Apenas Seguranças ou superiores podem usar o chatbot seu merda.",
+    "bouncer": "O chatbot não pode mover pessoas na fila de espera quando usado por um segurança viadão.",
+    "online": "/me %%BOTNAME%% v%%VERSION%% CHEGOU PRA COMER SEU CU SEU ARROMBADO!",
 
 
     "welcome": "Bem vindo(a) %%NAME%% seu gostosão",
     "welcomeback": "Bem vindo(a) de volta, %%NAME%%",
     "songknown": "/me :repeat: essa porra de video foi tocado %%PLAYS%% vez(es) nos últimos %%TIMETOTAL%%. Última vez: %%LASTTIME%% atrás. :repeat:",
-    "timelimit": "@%%NAME%%, sua música tem duração superior a %%MAXLENGTH%% minutos. Você precisa de permissão para tocar algo longo PORRA.",
+    "timelimit": "@%%NAME%%, sua música tem duração superior a %%MAXLENGTH%% minutos. Você não pode tocar algo longo PORRA.",
     "permissionownsong": "/me :up: @%%NAME%% tem permissão para tocar um video criado por ele!",
     "isblacklisted": "/me Essa música está na lista negra %%BLACKLIST%%! Pulando música...",
 
 
-    "isopen": "/me A roleta COMEÇOU CARALHO! Use !join para entrar nessa PORRA!",
-    "winnerpicked": "/me UM FILHO DA PUTA FOI ESCOLHIDO! @%%NAME%% ganhou a posição %%POSITION%% todos comam o cu dele.",
+    "isopen": "/me A roleta COMEÇOU CARALHO! Use !join para entrar nessa PORRA SEU FILHO DA PUTA!",
+    "winnerpicked": "/me UM FILHO DA PUTA FOI ESCOLHIDO! @%%NAME%% ganhou a posição %%POSITION%% perdeu playboy.",
 
 
     "alreadyadding": "/me Usuário já está sendo adicionado! Posição desejada alterada para %%POSITION%%.",
@@ -27,7 +27,7 @@
     "usernotfound": "/me Zé Bostola não encontrado.",
     "notdisconnected": "/me @%%NAME%% não caiu quando estive nesse caraio.",
     "noposition": "/me Última posição não reconhecida. A fila de espera precisa ser atualizada pelo menos uma vez para registrar posições.",
-    "toolongago": "/me @%%NAME%%'s desconectou-se a muito tempo atrás PORRA: %%TIME%%.",
+    "toolongago": "/me @%%NAME%%'s desconectou-se a muito tempo atrás PORRA, TÁ DE SACANAGEM NÉ KARAIO?: %%TIME%%.",
     "valid": "/me @%%NAME%% caiu a %%TIME%% atrás e deve ter posição %%POSITION%%.",
 
 
@@ -78,7 +78,7 @@
     "bouncerplusrank": "/me [@%%NAME%%] Você precisa ser Coordenador ou superior para ativar o Bouncer+.",
     "chatcleared": "/me [@%%NAME%%] O chat foi limpo com o cu de algum vassilau.",
     "deletechat": "/me [@%%NAME%%] O chat de %%USERNAME%% foi limpo com o cu dele.",
-    "commandslink": "/me Comandos do %%BOTNAME%%: %%LINK%%",
+    "commandslink": "/me Comandos do %%BOTNAME%%: http://goo.gl/0DT5RC",
     "eatcookie": "/me ama biscoitos esse arrombado.",
     "nousercookie": "/em Não vejo %%NAME%% na sala. Vou comer esse biscoito sozinho.",
     "selfcookie": "/me @%%NAME%%, você é mesquinho, né? Dando cookies a si mesmo, bah. Compartilhe um pouco com os outros!",
@@ -94,7 +94,7 @@
     "jointime": "/me [@%%NAMEFROM%%] @%%USERNAME%% esteve nessa delicia por %%TIME%%.",
     "kickrank": "/me [@%%NAME%%] Você não pode kickar alguém do mesmo rank ou superior!",
     "kick": "[@%%NAME%%], @%%USERNAME%% você está sendo kickado da comunidade por %%TIME%% minutos.",
-    "kill": "/me Eu voltarei, e vou comer seu cu com sal seu arromba...",
+    "kill": "/me Eu voltarei, e vou comer seu cu com sal seu arromba...do.............",
     "rouletteleave": "/me @%%NAME%% deixou a roleta!",
     "songlink": "/me [@%%NAME%%] Link para a música atual: %%LINK%%",
     "usedlockskip": "/me [%%NAME%% usou 'lockskip'.]",
