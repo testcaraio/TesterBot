@@ -11,7 +11,7 @@ Coordenador
 |Comando | Argumento |  Descrição |
 |:------:|:---------:|:--------------------------------------:|
 |!afklimit | X | seta o tempo maximo de AFK |
-|!clearman | |limpa o chat |
+|!clearman | @usuario |limpa o chat de um usuario expecifico |
 |!cycle | | ativa/desativa o ciclo de dj |
 |!refresh | | recarrega o bot |
 |!usercmdcd | X | coloca um delay para comando de usuarios cinzas |
@@ -29,8 +29,8 @@ Segurança+
 |!deletechat | @user | deleta o chat de um usuario expecifico |
 |!lock | | trava a lista de espera |
 |!maxlength | X | coloca um limite de duração de videos |
-|!move | @user (X) | move usuarios na lista de espera |
-|!remove | @user | remove usuarios da fila de espera |
+|!move | @usuario (X) | move usuarios na lista de espera |
+|!remove | @usuario | remove usuarios da fila de espera |
 |!rouleta | | começar a roleta |
 |!songstats | | ativa as estatiticas da música |
 |!unlock | | destrava a lista de espera |
@@ -42,23 +42,23 @@ segurança
 |Comandos | Argumentos |  Descrição |
 |:------:|:---------:|:--------------------------------------:|
 |!active | (X) | mostra quantos usuarios conversaram na ultima 1 hora |
-|!afkreset | @user | reseta o tempo de afk de um usuario |
-|!afktime | @user | mostra quanto tempo o usuario ficou afk |
-|!ban | @user | bane usuarios por 1 dia |
+|!afkreset | @usuario | reseta o tempo de afk de um usuario |
+|!afktime | @usuario | mostra quanto tempo o usuario ficou afk |
+|!ban | @usuario | bane usuarios por 1 dia |
 |!blacklist / !bl | blacklistname | adiciona as músicas para a lista negra
 |!cycleguard | | ativa o cycleguard |
-|!dclookup / !dc | (@user) | devolve o lugar do usuario caso ele tenha caido |
-|!english | @user | pede para os usuarios falarem sua lingua |
-|!eta | (@user) | mostrará quanto tempo demorará para o usuario tocar |
+|!dclookup / !dc | (@usuario) | devolve o lugar do usuario caso ele tenha caido |
+|!english | @usuario | pede para os usuarios falarem sua lingua |
+|!eta | (@usuario) | mostrará quanto tempo demorará para o usuario tocar |
 |!filter | | ativa/desativa o filtro de chat |
-|!jointime | @user | mostra quanto tempo o usuario esteve na sala |
+|!jointime | @usuario | mostra quanto tempo o usuario esteve na sala |
 |!kick | (X) | kicka usuarios da sala, o original é 0.25 minutos (15 segundos) |
 |!kill | ||desliga o bot |
 |!lockguard | | ativa/desativa o lockguard |
-|!lockskip | (reason) | pula o dj, e devolve seu lugar (a posição pode ser definida com !lockskippos) |
+|!lockskip | (motivo) | pula o dj, e devolve seu lugar (a posição pode ser definida com !lockskippos) |
 |!lockskippos | X | define a posição que o dj será movido com o lockskip |
-|!motd | (X)/(message) | quando não tem argumento definido, mandará a mensagem do dia, quando X é especificado, o MotD irá dar a todas as  X músicas mensagens |
-|!mute | @user (X) | mutar usuarios por X minutos, se X é expecificado. Se não ficrá com tempo indefinido (permanente) |
+|!motd | (X)/(mensagem) | quando não tem argumento definido, mandará a mensagem do dia, quando X é especificado, o MotD irá dar a todas as  X músicas mensagens |
+|!mute | @usuario (X) | mutar usuarios por X minutos, se X é expecificado. Se não ficrá com tempo indefinido (permanente) |
 |!reload | | recarrega o bot |
 |!restricteta | | ativa/desativa a restrição do ETA, usuarios cinzas só poderão usar o eta de 1 em 1 hora |
 |!sessionstats | | mostra o estatus da sessão atual |
@@ -66,9 +66,9 @@ segurança
 |!status | | mostra o estatus do bot, e alguns comandos |
 |!timeguard | | ativa/desativa o timeguard |
 |!togglemotd | | ativa/desativa o motd |
-|!unban | @user | desbane um usuario |
+|!unban | @usuario | desbane um usuario |
 |!unmute | | descala um usuario |
-|!voteratio | @user | mostra as estatiticas de votos de um usuario |
+|!voteratio | @usuario | mostra as estatiticas de votos de um usuario |
 
 DJ Residente
 -----------
@@ -87,10 +87,10 @@ Usuario
 |!autowoot | | coloca o link do Origem Woot, o autowoot que recomendamos |
 |!ba | | explica sobre o que é um BA (Nome verde) |
 |!commands | | dá o link dos comandos |
-|!biscoito | (@user) | dá um biscoito ou bolacha para o usuario |
-|!sacanear | (@user) | sacaneia um usuario |
-|!chantagear | (@user) | chantagueia um usuario |
-|!bater | (@user) | bate em algum usuario |
+|!biscoito | @usuario | dá um biscoito ou bolacha para o usuario |
+|!sacanear | @usuario | sacaneia um usuario |
+|!chantagear | @usuario | chantagueia um usuario |
+|!bater | @usuario | bate em algum usuario |
 |!dclookup / !dc | | usa o dc em si mesmo |
 |!emoji | | coloca o link dos emojis |
 |!eta | | mostra quanto tempo demora para você rodar seu video |
