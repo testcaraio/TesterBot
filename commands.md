@@ -11,7 +11,7 @@ Coordenador
 |Comando | Argumento |  Descrição |
 |:------:|:---------:|:--------------------------------------:|
 |!afklimit | X | seta o tempo maximo de AFK |
-|!clearman | @usuario |limpa o chat de um usuario expecifico |
+|!clearchat | |limpa todo o chat |
 |!cycle | | ativa/desativa o ciclo de dj |
 |!refresh | | recarrega o bot |
 |!usercmdcd | X | coloca um delay para comando de usuarios cinzas |
@@ -22,16 +22,16 @@ Segurança+
 
 |Commando | Argumento |  Descrição |
 |:------:|:---------:|:--------------------------------------:|
-|!add | @user | adiciona usuarios a fila de espera |
+|!add | @usuario | adiciona usuarios a fila de espera |
 |!afkremoval | | ativa a checagem de afk |
 |!autoskip | | pula as músicas automaticamente quando acabam (quando acontece o bug do video travar em 00:00) |
 |!bouncer+ | | desativa o segurança+ |
-|!deletechat | @user | deleta o chat de um usuario expecifico |
+|!clearman | @usuario | deleta o chat de um usuario expecifico |
 |!lock | | trava a lista de espera |
 |!maxlength | X | coloca um limite de duração de videos |
 |!move | @usuario (X) | move usuarios na lista de espera |
 |!remove | @usuario | remove usuarios da fila de espera |
-|!rouleta | | começar a roleta |
+|!roleta | | começar a roleta |
 |!songstats | | ativa as estatiticas da música |
 |!unlock | | destrava a lista de espera |
 |!welcome | | dá bem vindo aos usuarios quando entram |
