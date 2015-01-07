@@ -16,7 +16,7 @@
     "isblacklisted": "/me Essa música está na lista negra %%BLACKLIST%%! Pulando música...",
 
 
-    "isopen": "/me A roleta COMEÇOU SEU FILHO DA PUTA DO CARALHO! Use !join para entrar nessa PORRA SEU FILHO DA PUTA!",
+    "isopen": "/me A ROLETA RUSSA COMEÇOU SEU FILHO DA PUTA DO CARALHO! Use !join para entrar nessa PORRA SE TIVER CORAGEM SEU FILHO DA PUTA!",
     "winnerpicked": "/me UM FILHO DA PUTA FOI ESCOLHIDO! @%%NAME%% ganhou a posição %%POSITION%% KARAIO.",
 
 
@@ -66,7 +66,7 @@
     "lockguard": "lockguard",
     "usercommands": "comandos de usuário",
     "motd": "MotD",
-    "welcomemsg": "mensagem de boas vindas para novas bichas",
+    "welcomemsg": "Mensagem de boas vindas para novas bichas",
     "songstats": "estatísticas de música",
     "etarestriction": "restrição de eta",
     "activeusersintime": "/me [@%%NAME%%] %%AMOUNT%% usuários estiveram ativos nos últimos %%TIME%% minutos.",
@@ -90,12 +90,12 @@
     "eta": "/me @%%NAME%% irão ver sua bunda peluda em aproximadamente %%TIME%% nessa bagaça.",
     "facebook": "/me Curta nossa a porra da nossa página no Facebook: %%LINK%%",
     "starterhelp": "/me Essa imagem te ajudará a usar e entender o plug.dj sua nova bicha: %%LINK%%",
-    "roulettejoin": "/me @%%NAME%% entrou na porra da roleta! (Use !leave para desistir seu viadinho.)",
+    "roulettejoin": "/me @%%NAME%% entrou na porra da roleta russa! (Use !leave para desistir seu viadinho.)",
     "jointime": "/me [@%%NAMEFROM%%] @%%USERNAME%% esteve nessa delicia por %%TIME%%.",
     "kickrank": "/me [@%%NAME%%] Você não pode kickar alguém do mesmo rank ou superior!",
     "kick": "[@%%NAME%%], @%%USERNAME%% você está sendo kickado da comunidade por %%TIME%% minutos.",
     "kill": "/me Eu voltarei, e vou comer seu cu com sal seu arromba...do.............",
-    "rouletteleave": "/me @%%NAME%% desistiu da roleta! esse boiolinha",
+    "rouletteleave": "/me @%%NAME%% desistiu da roleta russa! esse boiolinha",
     "songlink": "/me [@%%NAME%%] Link para o lixo atual: %%LINK%%",
     "usedlockskip": "/me [%%NAME%% usou 'lockskip', é super efetivo neste tipo de pokemon.]",
     "lockskippos": "/me [@%%NAME%%] Lockskip está agora movendo para a posição %%POSITION%%.",
@@ -117,7 +117,7 @@
     "roomrules": "/me Encontre as regras desta peste aqui sinhô: %%LINK%%",
     "sessionstats": "/me [@%%NAME%%] Total woots: %%WOOTS%%, total mehs: %%MEHS%%, total grabs: %%GRABS%%.",
     "skip": "/me [%%NAME%% usou 'skip', é super efetivo neste tipo de Pokemon!.]",
-    "madeby": "/me Este bot foi feito por %%NAME%%.",
+    "madeby": "/me Esta delicia foi feito por %%NAME%%.",
     "activefor": "Estive online por %%TIME%%.",
     "swapinvalid": "/me [@%%NAME%%] Usuário inválido.",
     "swapwlonly": "/me [@%%NAME%%] Use !swap somente com usuários que estão na fila de espera.",
