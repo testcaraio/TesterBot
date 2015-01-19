@@ -1,39 +1,21 @@
-basicBot
+Exercito Bot
 ========
 
-A not so basic bot for plug.dj 
+Um bot delicioso para o Plug.dj
 
-!!!TO CUSTOMIZE: USE [THIS REPOSITORY](https://github.com/Yemasthui/basicBot-customization)!!!
+!!!Para customizar, use [ESTA PRE EDIÇÃO](https://github.com/B1G-B0SS/basicBot-customization)!!!
 ==============================================================================================
 
-IMPORTANT
----------
-
-__basicBot has been updated to work under plug's update. There may still be bugs and functionality is not guaranteed.__
-
-__Make sure to update your bookmark, as the link has changed recently!!!__
-
-__Important changes in version 2.x.x:__
-
-- Now should be fully compatible with Firefox.
-- You can now change the bot's name, no need to make a fork to change it anymore. Available under custom settings as "botName".
-- The bot's variable is now exposed outside of the script. You can access it as the variable "bot" in the console. This should allow for secondary scripts extending the bot without the need to fork and lose support on its basis.
-Be careful when extending it to make sure commands or features interact properly with the rest of them.
-An example script to extend the bot is provided under exampleExtension.js. Please do not fork this repository to just change that file. Details of how to use are provided inside.
-This is NOT needed to run the bot as it is provided, only if you want to add functionality.
-- Command checking has been reworked to facilitate adding commands through secondary scripts as explained above.
-- __There is now support for custom chat messages. This means you can use your own custom wording or translate it into your own language.__
-
-Usage
+Uso
 -----
 
-Bookmark the following code. To run the bot, run the bookmark.
+Salve nos favoritos o codigo. Para rodar o bot, rode o favoritado.
 
-`javascript:(function(){$.getScript('https://rawgit.com/Yemasthui/basicBot/master/basicBot.js');})();`
+`javascript:(function(){$.getScript('https://rawgit.com/B1G-B0SS/Exercito-Bot/master/basicBot.js');})();`
 
-If this does not work, go to https://raw.githubusercontent.com/Yemasthui/basicBot/master/basicBot.js and copy paste its content into your console (accessible in chrome by pressing f12) when on plug.dj in your community.
+Se não funcionar, vá em https://raw.githubusercontent.com/B1G-B0SS/Exercito-Bot/master/basicBot.js Copie, e cole o conteudo completo no console (F12) dentro da sua sala do Plug.DJ.
 
-###Commands###
+###Comandos###
 
 These can be found in [the commands file](https://github.com/Yemasthui/basicBot/blob/master/commands.md).
 
