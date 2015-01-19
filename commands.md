@@ -36,7 +36,7 @@ Segurança+
 |!unlock | | destrava a lista de espera |
 |!welcome | | dá bem vindo aos usuarios quando entram |
 
-segurança
+Segurança
 -------
 
 |Comandos | Argumentos |  Descrição |
@@ -88,7 +88,7 @@ Usuario
 |!ba | | explica sobre o que é um BA (Nome verde) |
 |!commands | | dá o link dos comandos |
 |!biscoito | @usuario | dá um biscoito ou bolacha para o usuario |
-|!sacanear | @usuario | sacaneia um usuario |
+|!sacanagem | @usuario | sacaneia um usuario |
 |!chantagear | @usuario | chantagueia um usuario |
 |!bater | @usuario | bate em algum usuario |
 |!dclookup / !dc | | usa o dc em si mesmo |
