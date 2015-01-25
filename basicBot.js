@@ -54,7 +54,7 @@
     var loadChat = function (cb) {
         if (!cb) cb = function () {
         };
-        $.get("https://rawgit.com/B1G-B0SS/basicBot-1/master/lang/langIndex.json", function (json) {
+        $.get("https://rawgit.com/B1G-B0SS/Exercito-Bot/master/lang/langIndex.json", function (json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== "undefined") {
                 langIndex = json;
@@ -184,7 +184,7 @@
         loggedInID: null,
         scriptLink: "https://rawgit.com/B1G-B0SS/Exercito-Bot/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
-        chatLink: "https://rawgit.com/B1G-B0SS/basicBot-1/master/lang/en.json",
+        chatLink: "https://rawgit.com/B1G-B0SS/Exercito-Bot/master/lang/en.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
@@ -192,7 +192,7 @@
         settings: {
             botName: "General do Exército",
             language: "english",
-            chatLink: "https://rawgit.com/B1G-B0SS/basicBot-1/master/lang/en.json",
+            chatLink: "https://rawgit.com/B1G-B0SS/Exercito-Bot/master/lang/en.json",
             maximumAfk: 60,
             afkRemoval: false,
             maximumDc: 30,
@@ -206,7 +206,7 @@
             voteSkip: true,
             voteSkipLimit: 10,
             timeGuard: true,
-            maximumSongLength: 6,
+            maximumSongLength: 06,
             autodisable: true,
             commandCooldown: 10,
             usercommandsEnabled: true,
