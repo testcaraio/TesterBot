@@ -174,11 +174,11 @@
         return m;
     };
 
-    var botCreator = "Biggu Bossu";
-    var botCreatorIDs = [3820121];
+    var botCreator = "Matthew aka. Yemasthui";
+    var botCreatorIDs = [];
 
     var basicBot = {
-        version: "6.9",
+        version: "2.1.4",
         status: false,
         name: "basicBot",
         loggedInID: null,
@@ -190,11 +190,11 @@
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: "General do Exército",
+            botName: "Professor do Cursinho de Zoeira",
             language: "english",
             chatLink: "https://rawgit.com/B1G-B0SS/Exercito-Bot/master/lang/en.json",
             maximumAfk: 60,
-            afkRemoval: false,
+            afkRemoval: true,
             maximumDc: 30,
             bouncerPlus: true,
             blacklistEnabled: true,
@@ -203,21 +203,21 @@
             maximumLocktime: 10,
             cycleGuard: true,
             maximumCycletime: 10,
-            voteSkip: true,
+            voteSkip: false,
             voteSkipLimit: 10,
             timeGuard: true,
             maximumSongLength: 06,
             autodisable: true,
-            commandCooldown: 10,
+            commandCooldown: 30,
             usercommandsEnabled: true,
             lockskipPosition: 3,
             lockskipReasons: [
-                ["tema", "Essa música não se encaixa com o tema da sala. "],
-                ["op", "Esse video é tocada de mais. "],
-                ["historico", "Esse video está no historico. "],
+                ["theme", "This song does not fit the room theme. "],
+                ["op", "This song is on the OP list. "],
+                ["history", "This song is in the history. "],
                 ["mix", "You played a mix, which is against the rules. "],
                 ["sound", "The song you played had bad sound quality or no sound. "],
-                ["nsfw", "O FILHO DA PUTA, PODE RODAR PUTARIA AQUI NÃO, SE QUISER BATER PUNHETA PEGA A CALCINHA DA GORDA ESTUPRADA POR MACACOS DA SUA MÃE. "],
+                ["nsfw", "The song you contained was NSFW (image or sound). "],
                 ["unavailable", "The song you played was not available for some users. "]
             ],
             afkpositionCheck: 15,
@@ -239,8 +239,8 @@
             songstats: true,
             commandLiteral: "!",
             blacklists: {
-                NSFW: "https://rawgit.com/B1G-B0SS/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
-                OP: "https://rawgit.com/B1G-B0SS/basicBot-customization/master/blacklists/ExampleOPlist.json"
+                NSFW: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
+                OP: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/ExampleOPlist.json"
             }
         },
         room: {
@@ -1088,10 +1088,13 @@
                 basicBot.room.roomstats.chatmessages++;
             },
             spam: [
-              'pulaaa', 'pulaa', 'pulaaaa'
+                'hueh', 'hu3', 'brbr', 'heu', 'brbr', 'kkkk', 'spoder', 'mafia', 'zuera', 'zueira',
+                'zueria', 'aehoo', 'aheu', 'alguem', 'algum', 'brazil', 'zoeira', 'fuckadmins', 'affff', 'vaisefoder', 'huenaarea',
+                'hitler', 'ashua', 'ahsu', 'ashau', 'lulz', 'huehue', 'hue', 'huehuehue', 'merda', 'pqp', 'puta', 'mulher', 'pula', 'retarda', 'caralho', 'filha', 'ppk',
+                'gringo', 'fuder', 'foder', 'hua', 'ahue', 'modafuka', 'modafoka', 'mudafuka', 'mudafoka', 'ooooooooooooooo', 'foda'
             ],
             curses: [
-                'pula'
+                'nigger', 'faggot', 'nigga', 'niqqa', 'motherfucker', 'modafocka'
             ]
         },
         connectAPI: function () {
@@ -1549,7 +1552,7 @@
             },
 
             clearchatCommand: {
-                command: 'clearman',
+                command: 'clearchat',
                 rank: 'manager',
                 type: 'exact',
                 functionality: function (chat, cmd) {
@@ -1578,181 +1581,34 @@
                 }
             },
 
-            biscoitoCommand: {
-                command: 'biscoito',
+            cookieCommand: {
+                command: 'cookie',
                 rank: 'user',
                 type: 'startsWith',
-                cookies: ['te deu um biscoito com ebola',
-                    'te deu um biscoito estragado',
-                    'te deu um biscoito de goza',
-                    'te deu um biscoito de pirokas',
-                    'te deu um biscoito de buceta',
-                    'te deu um biscoito de cu',
-                    'te deu uma bolacha com recheio de negão',
-                    'te deu o cu de sua mãe',
-                    'te deu o pau de seu pai',
-                    'te deu um biscoito que o @CleytonL acabou de passar na bunda suja',
-                    'te deu down'
+                cookies: ['has given you a chocolate chip cookie!',
+                    'has given you a soft homemade oatmeal cookie!',
+                    'has given you a plain, dry, old cookie. It was the last one in the bag. Gross.',
+                    'gives you a sugar cookie. What, no frosting and sprinkles? 0/10 would not touch.',
+                    'gives you a chocolate chip cookie. Oh wait, those are raisins. Bleck!',
+                    'gives you an enormous cookie. Poking it gives you more cookies. Weird.',
+                    'gives you a fortune cookie. It reads "Why aren\'t you working on any projects?"',
+                    'gives you a fortune cookie. It reads "Give that special someone a compliment"',
+                    'gives you a fortune cookie. It reads "Take a risk!"',
+                    'gives you a fortune cookie. It reads "Go outside."',
+                    'gives you a fortune cookie. It reads "Don\'t forget to eat your veggies!"',
+                    'gives you a fortune cookie. It reads "Do you even lift?"',
+                    'gives you a fortune cookie. It reads "m808 pls"',
+                    'gives you a fortune cookie. It reads "If you move your hips, you\'ll get all the ladies."',
+                    'gives you a fortune cookie. It reads "I love you."',
+                    'gives you a Golden Cookie. You can\'t eat it because it is made of gold. Dammit.',
+                    'gives you an Oreo cookie with a glass of milk!',
+                    'gives you a rainbow cookie made with love :heart:',
+                    'gives you an old cookie that was left out in the rain, it\'s moldy.',
+                    'bakes you fresh cookies, it smells amazing.'
                 ],
-                getBiscoito: function () {
-                    var c = Math.floor(Math.random() * this.biscoito.length);
-                    return this.biscoito[c];
-                },
-                functionality: function (chat, cmd) {
-                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
-                    else {
-                        var msg = chat.message;
-
-                        var space = msg.indexOf(' ');
-                        if (space === -1) {
-                            API.sendChat(basicBot.chat.eatcookie);
-                            return false;
-                        }
-                        else {
-                            var name = msg.substring(space + 2);
-                            var user = basicBot.userUtilities.lookupUserName(name);
-                            if (user === false || !user.inRoom) {
-                                return API.sendChat(subChat(basicBot.chat.nousercookie, {name: name}));
-                            }
-                            else if (user.username === chat.un) {
-                                return API.sendChat(subChat(basicBot.chat.selfcookie, {name: name}));
-                            }
-                            else {
-                                return API.sendChat(subChat(basicBot.chat.cookie, {nameto: user.username, namefrom: chat.un, cookie: this.getCookie()}));
-                            }
-                        }
-                    }
-                }
-            },
-
-            sacanagemCommand: {
-                command: 'sacanagem',
-                rank: 'user',
-                type: 'startsWith',
-                cookies: ['enfiou o dedo no seu cu!',
-                    'enfiou um ferro no seu pau!',
-                    'jogou uma faca no seu piru.',
-                    'chamou a Dilma peladona para você.',
-                    'enfiou um pinto negro no seu cu sem vaselina!',
-                    'mandou você ir buscar a peça.',
-                    'te capturou com uma pokebola de pirokas negras',
-                    'te botou para relaxar com um cavalo',
-                    'te botou para relaxar com uma galinha!',
-                    'te botou para relaxar com um cachorro.',
-                    'chamou o negão dele para te bater',
-                    'chamou a Gretchen para te pegar',
-                    'passou um pinto de borracha negro com ebola no seu cu',
-                    'apertou suas bolas com força"',
-                    'chutou suas bolas',
-                    'cortou suas bolas com uma tesoura',
-                    'acendeu uma vela no seu cu',
-                    'socou 100 metros de rola no teu cu',
-                    'chupou sua pirokinha',
-                    'jogou veneno para você broxar',
-                    'te deu o cu'
-                ],
-                getSacanagem: function () {
-                    var c = Math.floor(Math.random() * this.sacanagem.length);
-                    return this.sacanagem[c];
-                },
-                functionality: function (chat, cmd) {
-                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
-                    else {
-                        var msg = chat.message;
-
-                        var space = msg.indexOf(' ');
-                        if (space === -1) {
-                            API.sendChat(basicBot.chat.eatcookie);
-                            return false;
-                        }
-                        else {
-                            var name = msg.substring(space + 2);
-                            var user = basicBot.userUtilities.lookupUserName(name);
-                            if (user === false || !user.inRoom) {
-                                return API.sendChat(subChat(basicBot.chat.nousercookie, {name: name}));
-                            }
-                            else if (user.username === chat.un) {
-                                return API.sendChat(subChat(basicBot.chat.selfcookie, {name: name}));
-                            }
-                            else {
-                                return API.sendChat(subChat(basicBot.chat.cookie, {nameto: user.username, namefrom: chat.un, cookie: this.getCookie()}));
-                            }
-                        }
-                    }
-                }
-            },
-
-            baterCommand: {
-                command: 'bater',
-                rank: 'user',
-                type: 'startsWith',
-                cookies: ['te deu uma surra de pau mole',
-                    'chamou a Gretchen para te matar na cama',
-                    'te bateu com a peça que o Jailson foi buscar',
-                    'te bateu com o pinto do Kid Bengala',
-                    'te bateu com skate de modinha',
-                    'te bateu na cama com uma piroka africana',
-                    'comeu seu cu com areia',
-                    'atirou balas de paintball no seu saco',
-                    'te bateu com o cu',
-                    'é gay',
-                    'vai deixar um oco no seu rabo',
-                    'te estuprou com um taco de baseball',
-                    'chutou uma bola de futebol no seu saco'
-                ],
-                getBater: function () {
-                    var c = Math.floor(Math.random() * this.bater.length);
-                    return this.bater[c];
-                },
-                functionality: function (chat, cmd) {
-                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
-                    else {
-                        var msg = chat.message;
-
-                        var space = msg.indexOf(' ');
-                        if (space === -1) {
-                            API.sendChat(basicBot.chat.eatcookie);
-                            return false;
-                        }
-                        else {
-                            var name = msg.substring(space + 2);
-                            var user = basicBot.userUtilities.lookupUserName(name);
-                            if (user === false || !user.inRoom) {
-                                return API.sendChat(subChat(basicBot.chat.nousercookie, {name: name}));
-                            }
-                            else if (user.username === chat.un) {
-                                return API.sendChat(subChat(basicBot.chat.selfcookie, {name: name}));
-                            }
-                            else {
-                                return API.sendChat(subChat(basicBot.chat.cookie, {nameto: user.username, namefrom: chat.un, cookie: this.getCookie()}));
-                            }
-                        }
-                    }
-                }
-            },
-            
-            chantagearCommand: {
-                command: 'chantagear',
-                rank: 'user',
-                type: 'startsWith',
-                cookies: ['disse que vai enfiar uma barra no cu se não contar',
-                    'falou que vai contar tudo pra sua mãe',
-                    'sabe o que você fez no verão passado',
-                    'vai contar para sua avó',
-                    'quer 1 bilhão para não revelar seu segredo (o de que você é gay)',
-                    'disse que se não pagar, ele vai comer seu cu',
-                    'disse que vai contar para seu pai que você transa com o aparelho excretor',
-                    'sabe o que você faz quando vai na casa do amiguinho negro',
-                    'vai chamar o Paulo Guina para te dar um jeito',
-                    'vai chamar o Santana para acabar com você',
-                    'disse saber sobre sua zoofilia'
-                ],
-                getChantagear: function () {
-                    var c = Math.floor(Math.random() * this.chantagear.length);
-                    return this.chantagear[c];
+                getCookie: function () {
+                    var c = Math.floor(Math.random() * this.cookies.length);
+                    return this.cookies[c];
                 },
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -2101,7 +1957,7 @@
             },
 
             killCommand: {
-                command: 'matar',
+                command: 'kill',
                 rank: 'bouncer',
                 type: 'exact',
                 functionality: function (chat, cmd) {
@@ -2605,7 +2461,7 @@
             },
 
             rouletteCommand: {
-                command: 'roleta',
+                command: 'roulette',
                 rank: 'mod',
                 type: 'exact',
                 functionality: function (chat, cmd) {
@@ -2620,7 +2476,7 @@
             },
 
             rulesCommand: {
-                command: 'regras',
+                command: 'rules',
                 rank: 'user',
                 type: 'exact',
                 functionality: function (chat, cmd) {
