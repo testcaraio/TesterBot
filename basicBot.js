@@ -1088,10 +1088,10 @@
                 basicBot.room.roomstats.chatmessages++;
             },
             spam: [
-              'pulaaa', 'pulaa', 'pulaaaa',
+              'pulaaa', 'pulaa', 'pulaaaa'
             ],
             curses: [
-                'pula',
+                'pula'
             ]
         },
         connectAPI: function () {
@@ -1626,7 +1626,7 @@
                 }
             },
 
-                       sacanagemCommand: {
+            sacanagemCommand: {
                 command: 'sacanagem',
                 rank: 'user',
                 type: 'startsWith',
@@ -1684,7 +1684,7 @@
                 }
             },
 
-                                    baterCommand: {
+            baterCommand: {
                 command: 'bater',
                 rank: 'user',
                 type: 'startsWith',
@@ -1734,7 +1734,7 @@
                 }
             },
             
-                      chantagearCommand: {
+            chantagearCommand: {
                 command: 'chantagear',
                 rank: 'user',
                 type: 'startsWith',
