@@ -254,13 +254,6 @@
             afkInterval: null,
             autoskip: false,
             autoskipTimer: null,
-            autodisableInterval: null,
-            autodisableFunc: function () {
-                if (basicBot.status && basicBot.settings.autodisable) {
-                    API.sendChat('!afkdisable');
-                    API.sendChat('!joindisable');
-                }
-            },
             queueing: 0,
             queueable: true,
             currentDJID: null,
