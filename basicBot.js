@@ -174,7 +174,7 @@
         return m;
     };
 
-    var botCreator = "Biggu Bossu";
+    var botCreator = "Biggu Bosu";
     var botCreatorIDs = [3820121];
 
     var basicBot = {
