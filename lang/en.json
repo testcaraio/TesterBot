@@ -8,8 +8,8 @@
     "online": "/me %%BOTNAME%% v%%VERSION%% CHEGOU NESSA KARAIA!",
 
 
-    "welcome": "/me Seja welcomido(a) %%NAME%% amorzinho <3",
-    "welcomeback": "/me Seje welcomido(a) de volta :blue_heart: , %%NAME%%",
+    "welcome": "/me Seja welcomido(a) @%%NAME%% amorzinho <3",
+    "welcomeback": "/me Seje welcomido(a) de volta :blue_heart: , @%%NAME%%",
     "songknown": "/me @%%NAME%%, essa música está no historico de Dj's.",
     "timelimit": "/me @%%NAME%%, essa merda de video é maior que %%MAXLENGTH%% minutos carai, você não pode rodar coisas longas assim (Mesmo sendo delicia).",
     "permissionownsong": "/me :up: @%%NAME%% tem permissão para rodar a merdinha dele!",
