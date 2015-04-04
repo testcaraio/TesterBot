@@ -7,8 +7,8 @@
     "online": "/me %%BOTNAME%% v%%VERSION%% CHEGOU NESSE KAKAKARAIOOOOO!",
 
 
-    "welcome": "Seje welcomido(a), %%NAME%% e leia nossas regras http://goo.gl/6RP5x1",
-    "welcomeback": "Seje welcomido(a) de volta, %%NAME%%",
+    "welcome": "Seje welcomido(a), %%NAME%% amorzinho, leia nossas regras http://goo.gl/6RP5x1",
+    "welcomeback": "Seje welcomido(a) de volta, %%NAME%% amorzinho",
     "songknown": "@%%NAME%%, essa música está no histórico porra, vou pular",
     "timelimit": "@%%NAME%%, sua música tem duração maior que %%MAXLENGTH%% minutos. Você não pode rodar videos longos assim PORRA.",
     "permissionownsong": "/me :up: @%%NAME%% tem permissão para tocar música de própria autoria!",
