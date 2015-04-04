@@ -54,7 +54,7 @@
     var loadChat = function (cb) {
         if (!cb) cb = function () {
         };
-        $.get("https://rawgit.com/B1G-B0SS/basicBot-1/master/lang/langIndex.json", function (json) {
+        $.get("https://rawgit.com/B1G-B0SS/Exercito-Bot/master/lang/langIndex.json", function (json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== "undefined") {
                 langIndex = json;
@@ -174,9 +174,9 @@
         return m;
     };
 
-    var botCreator = "Matthew (Yemasthui)";
-    var botMaintainer = "Benzi (Quoona)"
-    var botCreatorIDs = ["3851534", "4105209"];
+    var botCreator = "";
+    var botMaintainer = ""
+    var botCreatorIDs = [];
 
     var basicBot = {
         version: "2.3.3",
