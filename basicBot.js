@@ -54,7 +54,7 @@
     var loadChat = function (cb) {
         if (!cb) cb = function () {
         };
-        $.get("https://rawgit.com/B1G-B0SS/Exercito-Bot/master/lang/langIndex.json", function (json) {
+        $.get("https://rawgit.com/B1G-B0SS/basicBot-1/master/lang/langIndex.json", function (json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== "undefined") {
                 langIndex = json;
@@ -120,8 +120,8 @@
                 API.chatLog(basicBot.chat.datarestored);
             }
         }
-        var json_sett = null;
-        var roominfo = document.getElementById("room-settings");
+        /*var json_sett = null;
+        var roominfo = document.getElementById("room-info");
         info = roominfo.textContent;
         var ref_bot = "@basicBot=";
         var ind_ref = info.indexOf(ref_bot);
@@ -139,7 +139,7 @@
                     }
                 }
             });
-        }
+        }*/
 
     };
 
@@ -174,29 +174,25 @@
         return m;
     };
 
-    var botCreator = "";
-    var botMaintainer = ""
-    var botCreatorIDs = [];
+    var botCreator = "Biggu Bossu";
+    var botCreatorIDs = [3820121];
 
     var basicBot = {
-        version: "2.3.3",
+        version: "6.9",
         status: false,
         name: "basicBot",
         loggedInID: null,
         scriptLink: "https://rawgit.com/B1G-B0SS/Exercito-Bot/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
-        chatLink: "https://rawgit.com/B1G-B0SS/basicBot-1/master/lang/pt.json",
+        chatLink: "https://rawgit.com/B1G-B0SS/basicBot-1/master/lang/en.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: "basicBot",
-            language: "portuguese",
-            chatLink: "https://rawgit.com/B1G-B0SS/basicBot-1/master/lang/pt.json",
-            startupCap: 1, // 1-200
-            startupVolume: 0, // 0-100
-            startupEmoji: false, // true or false
+            botName: "General do Exército",
+            language: "english",
+            chatLink: "https://rawgit.com/B1G-B0SS/basicBot-1/master/lang/en.json",
             maximumAfk: 60,
             afkRemoval: false,
             maximumDc: 30,
@@ -209,63 +205,27 @@
             maximumCycletime: 10,
             voteSkip: true,
             voteSkipLimit: 10,
-            historySkip: true,
             timeGuard: true,
-            maximumSongLength: 06,
-            autodisable: false,
-            commandCooldown: 30,
+            maximumSongLength: 6,
+            autodisable: true,
+            commandCooldown: 10,
             usercommandsEnabled: true,
             lockskipPosition: 3,
             lockskipReasons: [
-                ["theme", "This song does not fit the room theme. "],
-                ["op", "This song is on the OP list. "],
-                ["history", "This song is in the history. "],
+                ["tema", "Essa música não se encaixa com o tema da sala. "],
+                ["op", "Esse video é tocada de mais. "],
+                ["historico", "Esse video está no historico. "],
                 ["mix", "You played a mix, which is against the rules. "],
                 ["sound", "The song you played had bad sound quality or no sound. "],
-                ["nsfw", "The song you contained was NSFW (image or sound). "],
+                ["nsfw", "O FILHO DA PUTA, PODE RODAR PUTARIA AQUI NÃO, SE QUISER BATER PUNHETA PEGA A CALCINHA DA GORDA ESTUPRADA POR MACACOS DA SUA MÃE. "],
                 ["unavailable", "The song you played was not available for some users. "]
-            ],
-            ball: [
-            "Signs point to yes.",
-            "Yes.",
-            "Reply hazy, try again.",
-            "Without a doubt.",
-            "My sources say no.",
-            "As I see it, yes.",
-            "You may rely on it.",
-            "Concentrate and ask again.",
-            "Outlook not so good.",
-            "It is decidedly so.",
-            "Better not tell you now.",
-            "Very doubtful.",
-            "Yes - definitely.",
-            "It is certain.",
-            "Cannot predict now.",
-            "Most likely.",
-            "Ask again later.",
-            "My reply is no.",
-            "Outlook good.",
-            "Don't count on it.",
-            "Yes, in due time.",
-            "My sources say no.",
-            "Definitely not.",
-            "You will have to wait.",
-            "I have my doubts.",
-            "Outlook so so.",
-            "Looks good to me!",
-            "Who knows?",
-            "Looking good!",
-            "Probably.",
-            "Are you kidding?",
-            "Don't bet on it.",
-            "Forget about it."
             ],
             afkpositionCheck: 15,
             afkRankCheck: "ambassador",
             motdEnabled: false,
             motdInterval: 5,
             motd: "Temporary Message of the Day",
-            filterChat: false,
+            filterChat: true,
             etaRestriction: false,
             welcome: true,
             opLink: null,
@@ -277,12 +237,10 @@
             intervalMessages: [],
             messageInterval: 5,
             songstats: true,
-			ssOn: false,
-			ssLang: 'en',
             commandLiteral: "!",
             blacklists: {
-                NSFW: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
-                OP: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/ExampleOPlist.json"
+                NSFW: "https://rawgit.com/B1G-B0SS/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
+                OP: "https://rawgit.com/B1G-B0SS/basicBot-customization/master/blacklists/ExampleOPlist.json"
             }
         },
         room: {
@@ -438,9 +396,7 @@
                 var u;
                 if (typeof obj === "object") u = obj;
                 else u = API.getUser(obj);
-                for (var i = 0; i < botCreatorIDs.length; i++) {
-                    if (botCreatorIDs[i].indexOf(u.id) > -1) return 10;
-                }
+                if (botCreatorIDs.indexOf(u.id) > -1) return 10;
                 if (u.gRole < 2) return u.role;
                 else {
                     switch (u.gRole) {
@@ -741,17 +697,6 @@
                     }
                 }
             },
-			ssResponse: function(resp){
-				try{
-					var resp = JSON.parse(resp);
-					if ( resp.result != 200 )
-						return API.sendChat('[SS error @'+resp.cun +': ' + resp.result + ' - ' + resp.msg + ', ' + resp.sentence_resp +']');
-
-					API.sendChat('[SS > @' + resp.cun + '] ' + resp.sentence_resp);
-				}catch(e){
-					console.log('SimSimi Error: ' +e.stack);
-				}
-			},
             logNewBlacklistedSongs: function () {
                 if (typeof console.table !== 'undefined') {
                     console.table(basicBot.room.newBlacklisted);
@@ -870,8 +815,6 @@
             }
         },
         eventDjadvance: function (obj) {
-            $("#woot").click(); // autowoot
-
             var user = basicBot.userUtilities.lookupUser(obj.dj.id)
             for(var i = 0; i < basicBot.room.users.length; i++){
                 if(basicBot.room.users[i].id === user.id){
@@ -910,7 +853,7 @@
                 }
             }
 
-            /*var alreadyPlayed = false;
+            var alreadyPlayed = false;
             for (var i = 0; i < basicBot.room.historyList.length; i++) {
                 if (basicBot.room.historyList[i][0] === obj.media.cid) {
                     var firstPlayed = basicBot.room.historyList[i][1];
@@ -923,23 +866,6 @@
             }
             if (!alreadyPlayed) {
                 basicBot.room.historyList.push([obj.media.cid, +new Date()]);
-            }*/
-
-            if (basicBot.settings.historySkip) {
-                var alreadyPlayed = false;
-                var apihistory = API.getHistory();
-                var name = obj.dj.username;
-                for (var i = 0; i < apihistory.length; i++) {
-                    if (apihistory[i].media.cid === obj.media.cid) {
-                        API.sendChat(subChat(basicBot.chat.songknown, {name: name}));
-                        API.moderateForceSkip();
-                        basicBot.room.historyList[i].push(+new Date());
-                        alreadyPlayed = true;
-                    }
-                }
-                if (!alreadyPlayed) {
-                    basicBot.room.historyList.push([obj.media.cid, +new Date()]);
-                }
             }
             var newMedia = obj.media;
             if (basicBot.settings.timeGuard && newMedia.duration > basicBot.settings.maximumSongLength * 60 && !basicBot.room.roomevent) {
@@ -1162,13 +1088,10 @@
                 basicBot.room.roomstats.chatmessages++;
             },
             spam: [
-                'hueh', 'hu3', 'brbr', 'heu', 'brbr', 'kkkk', 'spoder', 'mafia', 'zuera', 'zueira',
-                'zueria', 'aehoo', 'aheu', 'alguem', 'algum', 'brazil', 'zoeira', 'fuckadmins', 'affff', 'vaisefoder', 'huenaarea',
-                'hitler', 'ashua', 'ahsu', 'ashau', 'lulz', 'huehue', 'hue', 'huehuehue', 'merda', 'pqp', 'puta', 'mulher', 'pula', 'retarda', 'caralho', 'filha', 'ppk',
-                'gringo', 'fuder', 'foder', 'hua', 'ahue', 'modafuka', 'modafoka', 'mudafuka', 'mudafoka', 'ooooooooooooooo', 'foda'
+              'pulaaa', 'pulaa', 'pulaaaa',
             ],
             curses: [
-                'nigger', 'faggot', 'nigga', 'niqqa', 'motherfucker', 'modafocka'
+                'pula',
             ]
         },
         connectAPI: function () {
@@ -1177,26 +1100,26 @@
                 eventUserskip: $.proxy(this.eventUserskip, this),
                 eventUserjoin: $.proxy(this.eventUserjoin, this),
                 eventUserleave: $.proxy(this.eventUserleave, this),
-                //eventUserfan: $.proxy(this.eventUserfan, this),
-                //eventFriendjoin: $.proxy(this.eventFriendjoin, this),
-                //eventFanjoin: $.proxy(this.eventFanjoin, this),
+                eventUserfan: $.proxy(this.eventUserfan, this),
+                eventFriendjoin: $.proxy(this.eventFriendjoin, this),
+                eventFanjoin: $.proxy(this.eventFanjoin, this),
                 eventVoteupdate: $.proxy(this.eventVoteupdate, this),
                 eventCurateupdate: $.proxy(this.eventCurateupdate, this),
                 eventRoomscoreupdate: $.proxy(this.eventRoomscoreupdate, this),
                 eventDjadvance: $.proxy(this.eventDjadvance, this),
-                //eventDjupdate: $.proxy(this.eventDjupdate, this),
+                eventDjupdate: $.proxy(this.eventDjupdate, this),
                 eventWaitlistupdate: $.proxy(this.eventWaitlistupdate, this),
                 eventVoteskip: $.proxy(this.eventVoteskip, this),
                 eventModskip: $.proxy(this.eventModskip, this),
                 eventChatcommand: $.proxy(this.eventChatcommand, this),
-                eventHistoryupdate: $.proxy(this.eventHistoryupdate, this),
+                eventHistoryupdate: $.proxy(this.eventHistoryupdate, this)
 
             };
             API.on(API.CHAT, this.proxy.eventChat);
             API.on(API.USER_SKIP, this.proxy.eventUserskip);
             API.on(API.USER_JOIN, this.proxy.eventUserjoin);
             API.on(API.USER_LEAVE, this.proxy.eventUserleave);
-            //API.on(API.USER_FAN, this.proxy.eventUserfan);
+            API.on(API.USER_FAN, this.proxy.eventUserfan);
             API.on(API.VOTE_UPDATE, this.proxy.eventVoteupdate);
             API.on(API.GRAB_UPDATE, this.proxy.eventCurateupdate);
             API.on(API.ROOM_SCORE_UPDATE, this.proxy.eventRoomscoreupdate);
@@ -1211,7 +1134,7 @@
             API.off(API.USER_SKIP, this.proxy.eventUserskip);
             API.off(API.USER_JOIN, this.proxy.eventUserjoin);
             API.off(API.USER_LEAVE, this.proxy.eventUserleave);
-            //API.off(API.USER_FAN, this.proxy.eventUserfan);
+            API.off(API.USER_FAN, this.proxy.eventUserfan);
             API.off(API.VOTE_UPDATE, this.proxy.eventVoteupdate);
             API.off(API.CURATE_UPDATE, this.proxy.eventCurateupdate);
             API.off(API.ROOM_SCORE_UPDATE, this.proxy.eventRoomscoreupdate);
@@ -1235,24 +1158,6 @@
                     type: "DELETE"
                 })
             };
-
-            var roomURL = window.location.pathname;
-            var Check;
-
-            var detect = function(){
-                if(roomURL != window.location.pathname){
-                    clearInterval(Check)
-                    console.log("Killing bot after room change.");
-                    storeToStorage();
-                    basicBot.disconnectAPI();
-                    setTimeout(function () {
-                        kill();
-                    }, 1000);
-                }
-            };
-
-            Check = setInterval(function(){ detect() }, 100);
-
             retrieveSettings();
             retrieveFromStorage();
             window.bot = basicBot;
@@ -1295,25 +1200,12 @@
             }, 60 * 60 * 1000);
             basicBot.loggedInID = API.getUser().id;
             basicBot.status = true;
-            API.sendChat('/cap ' + basicBot.settings.startupCap);
-            API.setVolume(basicBot.settings.startupVolume);
-            $("#woot").click();
-            if (basicBot.settings.startupEmoji) {
-                var emojibuttonoff = $(".icon-emoji-off");
-                if (emojibuttonoff.length > 0) {
-                    emojibuttonoff[0].click();
-                }
-                API.chatLog(':smile: Emojis enabled.');
+            API.sendChat('/cap 1');
+            API.setVolume(0);
+            var emojibutton = $(".icon-emoji-on");
+            if (emojibutton.length > 0) {
+                emojibutton[0].click();
             }
-            else {
-                var emojibuttonon = $(".icon-emoji-on");
-                if (emojibuttonon.length > 0) {
-                    emojibuttonon[0].click();
-                }
-                API.chatLog('Emojis disabled.');
-            }
-            API.chatLog('Avatars capped at ' + basicBot.settings.startupCap);
-            API.chatLog('Volume set to ' + basicBot.settings.startupVolume);
             loadChat(API.sendChat(subChat(basicBot.chat.online, {botname: basicBot.settings.botName, version: basicBot.version})));
         },
         commands: {
@@ -1511,27 +1403,6 @@
                 }
             },
 
-            autodisableCommand: {
-                command: 'autodisable',
-                rank: 'bouncer',
-                type: 'exact',
-                functionality: function (chat, cmd) {
-                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
-                    else {
-                        if (basicBot.settings.autodisable) {
-                            basicBot.settings.autodisable = !basicBot.settings.autodisable;
-                            return API.sendChat(subChat(basicBot.chat.toggleoff, {name: chat.un, 'function': basicBot.chat.autodisable}));
-                        }
-                        else {
-                            basicBot.settings.autodisable = !basicBot.settings.autodisable;
-                            return API.sendChat(subChat(basicBot.chat.toggleon, {name: chat.un, 'function': basicBot.chat.autodisable}));
-                        }
-
-                    }
-                }
-            },
-
             autoskipCommand: {
                 command: 'autoskip',
                 rank: 'mod',
@@ -1576,25 +1447,6 @@
                     else {
                         API.sendChat(basicBot.chat.brandambassador);
                     }
-                }
-            },
-
-            ballCommand: {
-                command: ['8ball', 'ask'],
-                rank: 'user',
-                type: 'startsWith',
-                functionality: function (chat, cmd) {
-                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
-                    else {
-                            var crowd = API.getUsers();
-                            var msg = chat.message;
-                            var argument = msg.substring(cmd.length + 1);
-                            var randomUser = Math.floor(Math.random() * crowd.length);
-                            var randomBall = Math.floor(Math.random() * basicBot.settings.ball.length);
-                            var randomSentence = Math.floor(Math.random() * 1);
-                            API.sendChat(subChat(basicBot.chat.ball, {name: chat.un, botname: basicBot.settings.botName, question: argument, response: basicBot.settings.ball[randomBall]}));
-                     }
                 }
             },
 
@@ -1697,7 +1549,7 @@
             },
 
             clearchatCommand: {
-                command: 'clearchat',
+                command: 'clearman',
                 rank: 'manager',
                 type: 'exact',
                 functionality: function (chat, cmd) {
@@ -1726,34 +1578,181 @@
                 }
             },
 
-            cookieCommand: {
-                command: 'cookie',
+            biscoitoCommand: {
+                command: 'biscoito',
                 rank: 'user',
                 type: 'startsWith',
-                cookies: ['has given you a chocolate chip cookie!',
-                    'has given you a soft homemade oatmeal cookie!',
-                    'has given you a plain, dry, old cookie. It was the last one in the bag. Gross.',
-                    'gives you a sugar cookie. What, no frosting and sprinkles? 0/10 would not touch.',
-                    'gives you a chocolate chip cookie. Oh wait, those are raisins. Bleck!',
-                    'gives you an enormous cookie. Poking it gives you more cookies. Weird.',
-                    'gives you a fortune cookie. It reads "Why aren\'t you working on any projects?"',
-                    'gives you a fortune cookie. It reads "Give that special someone a compliment"',
-                    'gives you a fortune cookie. It reads "Take a risk!"',
-                    'gives you a fortune cookie. It reads "Go outside."',
-                    'gives you a fortune cookie. It reads "Don\'t forget to eat your veggies!"',
-                    'gives you a fortune cookie. It reads "Do you even lift?"',
-                    'gives you a fortune cookie. It reads "m808 pls"',
-                    'gives you a fortune cookie. It reads "If you move your hips, you\'ll get all the ladies."',
-                    'gives you a fortune cookie. It reads "I love you."',
-                    'gives you a Golden Cookie. You can\'t eat it because it is made of gold. Dammit.',
-                    'gives you an Oreo cookie with a glass of milk!',
-                    'gives you a rainbow cookie made with love :heart:',
-                    'gives you an old cookie that was left out in the rain, it\'s moldy.',
-                    'bakes you fresh cookies, it smells amazing.'
+                cookies: ['te deu um biscoito com ebola',
+                    'te deu um biscoito estragado',
+                    'te deu um biscoito de goza',
+                    'te deu um biscoito de pirokas',
+                    'te deu um biscoito de buceta',
+                    'te deu um biscoito de cu',
+                    'te deu uma bolacha com recheio de negão',
+                    'te deu o cu de sua mãe',
+                    'te deu o pau de seu pai',
+                    'te deu um biscoito que o @CleytonL acabou de passar na bunda suja',
+                    'te deu down'
                 ],
-                getCookie: function () {
-                    var c = Math.floor(Math.random() * this.cookies.length);
-                    return this.cookies[c];
+                getBiscoito: function () {
+                    var c = Math.floor(Math.random() * this.biscoito.length);
+                    return this.biscoito[c];
+                },
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        var msg = chat.message;
+
+                        var space = msg.indexOf(' ');
+                        if (space === -1) {
+                            API.sendChat(basicBot.chat.eatcookie);
+                            return false;
+                        }
+                        else {
+                            var name = msg.substring(space + 2);
+                            var user = basicBot.userUtilities.lookupUserName(name);
+                            if (user === false || !user.inRoom) {
+                                return API.sendChat(subChat(basicBot.chat.nousercookie, {name: name}));
+                            }
+                            else if (user.username === chat.un) {
+                                return API.sendChat(subChat(basicBot.chat.selfcookie, {name: name}));
+                            }
+                            else {
+                                return API.sendChat(subChat(basicBot.chat.cookie, {nameto: user.username, namefrom: chat.un, cookie: this.getCookie()}));
+                            }
+                        }
+                    }
+                }
+            },
+
+                       sacanagemCommand: {
+                command: 'sacanagem',
+                rank: 'user',
+                type: 'startsWith',
+                cookies: ['enfiou o dedo no seu cu!',
+                    'enfiou um ferro no seu pau!',
+                    'jogou uma faca no seu piru.',
+                    'chamou a Dilma peladona para você.',
+                    'enfiou um pinto negro no seu cu sem vaselina!',
+                    'mandou você ir buscar a peça.',
+                    'te capturou com uma pokebola de pirokas negras',
+                    'te botou para relaxar com um cavalo',
+                    'te botou para relaxar com uma galinha!',
+                    'te botou para relaxar com um cachorro.',
+                    'chamou o negão dele para te bater',
+                    'chamou a Gretchen para te pegar',
+                    'passou um pinto de borracha negro com ebola no seu cu',
+                    'apertou suas bolas com força"',
+                    'chutou suas bolas',
+                    'cortou suas bolas com uma tesoura',
+                    'acendeu uma vela no seu cu',
+                    'socou 100 metros de rola no teu cu',
+                    'chupou sua pirokinha',
+                    'jogou veneno para você broxar',
+                    'te deu o cu'
+                ],
+                getSacanagem: function () {
+                    var c = Math.floor(Math.random() * this.sacanagem.length);
+                    return this.sacanagem[c];
+                },
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        var msg = chat.message;
+
+                        var space = msg.indexOf(' ');
+                        if (space === -1) {
+                            API.sendChat(basicBot.chat.eatcookie);
+                            return false;
+                        }
+                        else {
+                            var name = msg.substring(space + 2);
+                            var user = basicBot.userUtilities.lookupUserName(name);
+                            if (user === false || !user.inRoom) {
+                                return API.sendChat(subChat(basicBot.chat.nousercookie, {name: name}));
+                            }
+                            else if (user.username === chat.un) {
+                                return API.sendChat(subChat(basicBot.chat.selfcookie, {name: name}));
+                            }
+                            else {
+                                return API.sendChat(subChat(basicBot.chat.cookie, {nameto: user.username, namefrom: chat.un, cookie: this.getCookie()}));
+                            }
+                        }
+                    }
+                }
+            },
+
+                                    baterCommand: {
+                command: 'bater',
+                rank: 'user',
+                type: 'startsWith',
+                cookies: ['te deu uma surra de pau mole',
+                    'chamou a Gretchen para te matar na cama',
+                    'te bateu com a peça que o Jailson foi buscar',
+                    'te bateu com o pinto do Kid Bengala',
+                    'te bateu com skate de modinha',
+                    'te bateu na cama com uma piroka africana',
+                    'comeu seu cu com areia',
+                    'atirou balas de paintball no seu saco',
+                    'te bateu com o cu',
+                    'é gay',
+                    'vai deixar um oco no seu rabo',
+                    'te estuprou com um taco de baseball',
+                    'chutou uma bola de futebol no seu saco'
+                ],
+                getBater: function () {
+                    var c = Math.floor(Math.random() * this.bater.length);
+                    return this.bater[c];
+                },
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        var msg = chat.message;
+
+                        var space = msg.indexOf(' ');
+                        if (space === -1) {
+                            API.sendChat(basicBot.chat.eatcookie);
+                            return false;
+                        }
+                        else {
+                            var name = msg.substring(space + 2);
+                            var user = basicBot.userUtilities.lookupUserName(name);
+                            if (user === false || !user.inRoom) {
+                                return API.sendChat(subChat(basicBot.chat.nousercookie, {name: name}));
+                            }
+                            else if (user.username === chat.un) {
+                                return API.sendChat(subChat(basicBot.chat.selfcookie, {name: name}));
+                            }
+                            else {
+                                return API.sendChat(subChat(basicBot.chat.cookie, {nameto: user.username, namefrom: chat.un, cookie: this.getCookie()}));
+                            }
+                        }
+                    }
+                }
+            },
+            
+                      chantagearCommand: {
+                command: 'chantagear',
+                rank: 'user',
+                type: 'startsWith',
+                cookies: ['disse que vai enfiar uma barra no cu se não contar',
+                    'falou que vai contar tudo pra sua mãe',
+                    'sabe o que você fez no verão passado',
+                    'vai contar para sua avó',
+                    'quer 1 bilhão para não revelar seu segredo (o de que você é gay)',
+                    'disse que se não pagar, ele vai comer seu cu',
+                    'disse que vai contar para seu pai que você transa com o aparelho excretor',
+                    'sabe o que você faz quando vai na casa do amiguinho negro',
+                    'vai chamar o Paulo Guina para te dar um jeito',
+                    'vai chamar o Santana para acabar com você',
+                    'disse saber sobre sua zoofilia'
+                ],
+                getChantagear: function () {
+                    var c = Math.floor(Math.random() * this.chantagear.length);
+                    return this.chantagear[c];
                 },
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1837,6 +1836,49 @@
                 }
             },
 
+            voteskipCommand: {
+                command: 'voteskip',
+                rank: 'manager',
+                type: 'startsWith',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        var msg = chat.message;
+                        if (msg.length <= cmd.length + 1) return API.sendChat(subChat(basicBot.chat.voteskiplimit, {name: chat.un, limit: basicBot.settings.voteSkipLimit}));
+                        var argument = msg.substring(cmd.length + 1);
+                        if (!basicBot.settings.voteSkip) basicBot.settings.voteSkip = !basicBot.settings.voteSkip;
+                        if (isNaN(argument)) {
+                            API.sendChat(subChat(basicBot.chat.voteskipinvalidlimit, {name: chat.un}));
+                        }
+                        else {
+                            basicBot.settings.voteSkipLimit = argument;
+                            API.sendChat(subChat(basicBot.chat.voteskipsetlimit, {name: chat.un, limit: basicBot.settings.voteSkipLimit}));
+                        }
+                    }
+                }
+            },
+
+            togglevoteskipCommand: {
+                command: 'togglevoteskip',
+                rank: 'bouncer',
+                type: 'exact',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        if (basicBot.settings.voteSkip) {
+                            basicBot.settings.voteSkip = !basicBot.settings.voteSkip;
+                            API.sendChat(subChat(basicBot.chat.toggleoff, {name: chat.un, 'function': basicBot.chat.voteskip}));
+                        }
+                        else {
+                            basicBot.settings.motdEnabled = !basicBot.settings.motdEnabled;
+                            API.sendChat(subChat(basicBot.chat.toggleon, {name: chat.un, 'function': basicBot.chat.voteskip}));
+                        }
+                    }
+                }
+            },
+
             dclookupCommand: {
                 command: ['dclookup', 'dc'],
                 rank: 'user',
@@ -1861,7 +1903,7 @@
                 }
             },
 
-            /*deletechatCommand: {
+            deletechatCommand: {
                 command: 'deletechat',
                 rank: 'mod',
                 type: 'startsWith',
@@ -1885,7 +1927,7 @@
                         API.sendChat(subChat(basicBot.chat.deletechat, {name: chat.un, username: name}));
                     }
                 }
-            },*/
+            },
 
             emojiCommand: {
                 command: 'emoji',
@@ -1897,39 +1939,6 @@
                     else {
                         var link = 'http://www.emoji-cheat-sheet.com/';
                         API.sendChat(subChat(basicBot.chat.emojilist, {link: link}));
-                    }
-                }
-            },
-
-            englishCommand: {
-                command: 'english',
-                rank: 'bouncer',
-                type: 'startsWith',
-                functionality: function (chat, cmd) {
-                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
-                    else {
-                        if(chat.message.length === cmd.length) return API.sendChat('/me No user specified.');
-                        var name = chat.message.substring(cmd.length + 2);
-                        var user = basicBot.userUtilities.lookupUserName(name);
-                        if(typeof user === 'boolean') return API.sendChat('/me Invalid user specified.');
-                        var lang = basicBot.userUtilities.getUser(user).language;
-                        var ch = '/me @' + name + ' ';
-                        switch(lang){
-                            case 'en': break;
-                            case 'da': ch += 'VÃ¦r venlig at tale engelsk.'; break;
-                            case 'de': ch += 'Bitte sprechen Sie Englisch.'; break;
-                            case 'es': ch += 'Por favor, hable InglÃ©s.'; break;
-                            case 'fr': ch += 'Parlez anglais, s\'il vous plaÃ®t.'; break;
-                            case 'nl': ch += 'Spreek Engels, alstublieft.'; break;
-                            case 'pl': ch += 'ProszÄ™ mÃ³wiÄ‡ po angielsku.'; break;
-                            case 'pt': ch += 'Por favor, fale InglÃªs.'; break;
-                            case 'sk': ch += 'Hovorte po anglicky, prosÃ­m.'; break;
-                            case 'cs': ch += 'Mluvte prosÃ­m anglicky.'; break;
-                            case 'sr': ch += 'ÐœÐ¾Ð»Ð¸Ð¼ Ð’Ð°Ñ, Ð³Ð¾Ð²Ð¾Ñ€Ð¸Ñ‚Ðµ ÐµÐ½Ð³Ð»ÐµÑÐºÐ¸.'; break;                                  
-                        }
-                        ch += ' English please.';
-                        API.sendChat(ch);
                     }
                 }
             },
@@ -1995,98 +2004,6 @@
                 }
             },
 
-            ghostbusterCommand: {
-                command: 'ghostbuster',
-                rank: 'user',
-                type: 'startsWith',
-                functionality: function (chat, cmd) {
-                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
-                    else {
-                        var msg = chat.message;
-                        var name;
-                        if (msg.length === cmd.length) name = chat.un;
-                        else {
-                            name = msg.substr(cmd.length + 2);
-                        }
-                        var user = basicBot.userUtilities.lookupUserName(name);
-                        if (user === false || !user.inRoom) {
-                            return API.sendChat(subChat(basicBot.chat.ghosting, {name1: chat.un, name2: name}));
-                        }
-                        else API.sendChat(subChat(basicBot.chat.notghosting, {name1: chat.un, name2: name}));     
-                    }
-                }
-            },
-
-            gifCommand: {
-                command: ['gif', 'giphy'],
-                rank: 'user',
-                type: 'startsWith',
-                functionality: function (chat, cmd) {
-                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
-                    else {
-                        var msg = chat.message;
-                        if (msg.length !== cmd.length) {
-                            function get_id(api_key, fixedtag, func)
-                            {
-                                $.getJSON(
-                                    "https://api.giphy.com/v1/gifs/random?", 
-                                    { 
-                                        "format": "json",
-                                        "api_key": api_key,
-                                        "rating": rating,
-                                        "tag": fixedtag
-                                    },
-                                    function(response)
-                                    {
-                                        func(response.data.id);
-                                    }
-                                    )
-                            }
-                            var api_key = "dc6zaTOxFJmzC"; // public beta key
-                            var rating = "pg-13"; // PG 13 gifs
-                            var tag = msg.substr(cmd.length + 1);
-                            var fixedtag = tag.replace(/ /g,"+");
-                            var commatag = tag.replace(/ /g,", ");
-                            get_id(api_key, tag, function(id) {
-                                if (typeof id !== 'undefined') {
-                                    API.sendChat(subChat(basicBot.chat.validgiftags, {name: chat.un, id: id, tags: commatag}));
-                                } else {
-                                    API.sendChat(subChat(basicBot.chat.invalidgiftags, {name: chat.un, tags: commatag}));
-                                }
-                            });
-                        }
-                        else {
-                            function get_random_id(api_key, func)
-                            {
-                                $.getJSON(
-                                    "https://api.giphy.com/v1/gifs/random?", 
-                                    { 
-                                        "format": "json",
-                                        "api_key": api_key,
-                                        "rating": rating
-                                    },
-                                    function(response)
-                                    {
-                                        func(response.data.id);
-                                    }
-                                    )
-                            }
-                            var api_key = "dc6zaTOxFJmzC"; // public beta key
-                            var rating = "pg-13"; // PG 13 gifs
-                            get_random_id(api_key, function(id) {
-                                if (typeof id !== 'undefined') {
-                                    API.sendChat(subChat(basicBot.chat.validgifrandom, {name: chat.un, id: id}));
-                                } else {
-                                    API.sendChat(subChat(basicBot.chat.invalidgifrandom, {name: chat.un}));
-                                }
-                            });
-                        }
-                    }
-                }
-            },
-
             helpCommand: {
                 command: 'help',
                 rank: 'user',
@@ -2095,28 +2012,8 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                        var link = "(Updated link coming soon)";
+                        var link = "http://i.imgur.com/SBAso1N.jpg";
                         API.sendChat(subChat(basicBot.chat.starterhelp, {link: link}));
-                    }
-                }
-            },
-
-            historyskipCommand: {
-                command: 'historyskip',
-                rank: 'bouncer',
-                type: 'exact',
-                functionality: function (chat, cmd) {
-                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
-                    else {
-                        if (basicBot.settings.historySkip) {
-                            basicBot.settings.historySkip = !basicBot.settings.historySkip;
-                            API.sendChat(subChat(basicBot.chat.toggleoff, {name: chat.un, 'function': basicBot.chat.historyskip}));
-                        }
-                        else {
-                            basicBot.settings.historySkip = !basicBot.settings.historySkip;
-                            API.sendChat(subChat(basicBot.chat.toggleon, {name: chat.un, 'function': basicBot.chat.historyskip}));
-                        }
                     }
                 }
             },
@@ -2202,57 +2099,9 @@
                     }
                 }
             },
-			
-			ssCommand: {
-                command: 'ss',
-                rank: 'user',
-                type: 'startsWith',
-                functionality: function (chat, cmd) {
-                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
-                    else {
-                        var msg = chat.message;
-                        var firstSpace = msg.indexOf(' ');
-						var msgSplit = msg.split(' ');
-						
-						if (msgSplit.length > 1 && msgSplit.length <= 3){
-							var opt = msgSplit[1].toLowerCase();
-							var allow = basicBot.commands.executable('mod', chat);
-							
-							if (opt == 'on' || opt == 'off'){
-								if (!allow) return void (0);
-								basicBot.settings.ssOn = (opt == 'on'?true:false);
-								return API.sendChat('/me SimSimi ' + (basicBot.settings.ssOn ? 'enabled' : 'disabled'));
-							}
-							if (msgSplit.length == 3 && opt=='lang' && msgSplit[2].length==2){
-								if (!allow) return void (0);
-								basicBot.settings.ssLang = msgSplit[2].toLowerCase();
-								return API.sendChat('/me SimSimi language defined, if avaliable, to ' + basicBot.settings.ssLang.toUpperCase());
-							}
-						}
-						
-						if (!basicBot.settings.ssOn) return void (0);
-						
-						$.ajax({
-							url : 'https://bots-caipira.rhcloud.com',
-							method: 'POST',
-							data : {
-								bot:'ss',
-								msg : msg.substring(firstSpace + 1),
-								lang:basicBot.settings.ssLang,
-								cun : chat.un
-							}
-						})
-						.done(basicBot.roomUtilities.ssResponse)
-						.error(function() {
-							console.log('SimSimi error: failed to send request');
-						});
-                    }
-                }
-            },
 
             killCommand: {
-                command: 'kill',
+                command: 'matar',
                 rank: 'bouncer',
                 type: 'exact',
                 functionality: function (chat, cmd) {
@@ -2357,7 +2206,7 @@
                     else {
                         if (basicBot.settings.lockGuard) {
                             basicBot.settings.lockGuard = !basicBot.settings.lockGuard;
-                            return API.sendChat(subChat(basicBot.chat.toggleoff, {name: chat.un, 'function': basicBot.chat.lockguard}));
+                            return API.sendChat(subChat(basicBot.chat.toggleoff, {name: chat.un, 'function': basicBot.chat.lockdown}));
                         }
                         else {
                             basicBot.settings.lockGuard = !basicBot.settings.lockGuard;
@@ -2470,22 +2319,6 @@
                             return API.sendChat(subChat(basicBot.chat.lockguardtime, {name: chat.un, time: basicBot.settings.maximumLocktime}));
                         }
                         else return API.sendChat(subChat(basicBot.chat.invalidtime, {name: chat.un}));
-                    }
-                }
-            },
-
-            logoutCommand: {
-                command: 'logout',
-                rank: 'manager',
-                type: 'exact',
-                functionality: function (chat, cmd) {
-                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
-                    else {
-                        API.sendChat(subChat(basicBot.chat.logout, {name: chat.un, botname: basicBot.settings.botName}));
-                        setTimeout(function () {
-                            $(".logout").mousedown()
-                        }, 1000);
                     }
                 }
             },
@@ -2683,19 +2516,6 @@
                 }
             },
 
-            purchaseCommand: {
-                command: ['purchase'],
-                rank: 'user',
-                type: 'exact',
-                functionality: function (chat, cmd) {
-                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
-                    else {
-                        API.sendChat(subChat(basicBot.chat.purchase, {name: chat.un}));
-                    }
-                }
-            },
-
             refreshCommand: {
                 command: 'refresh',
                 rank: 'manager',
@@ -2785,7 +2605,7 @@
             },
 
             rouletteCommand: {
-                command: 'roulette',
+                command: 'roleta',
                 rank: 'mod',
                 type: 'exact',
                 functionality: function (chat, cmd) {
@@ -2800,7 +2620,7 @@
             },
 
             rulesCommand: {
-                command: 'rules',
+                command: 'regras',
                 rank: 'user',
                 type: 'exact',
                 functionality: function (chat, cmd) {
@@ -2877,7 +2697,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                        API.sendChat('/me This bot was created by ' + botCreator + ', but is now maintained by ' + botMaintainer + ".");
+                        API.sendChat('/me This bot was made by ' + botCreator + '.');
                     }
                 }
             },
@@ -2930,13 +2750,8 @@
                         else msg += 'OFF';
                         msg += '. ';
 
-                        msg += basicBot.chat.historyskip + ': ';
-                        if (basicBot.settings.historySkip) msg += 'ON';
-                        else msg += 'OFF';
-                        msg += '. ';
-
                         msg += basicBot.chat.voteskip + ': ';
-                        if (basicBot.settings.voteSkip) msg += 'ON';
+                        if (basicBot.settings.voteskip) msg += 'ON';
                         else msg += 'OFF';
                         msg += '. ';
 
@@ -3056,26 +2871,6 @@
                         else {
                             basicBot.settings.motdEnabled = !basicBot.settings.motdEnabled;
                             API.sendChat(subChat(basicBot.chat.toggleon, {name: chat.un, 'function': basicBot.chat.motd}));
-                        }
-                    }
-                }
-            },
-
-            togglevoteskipCommand: {
-                command: 'togglevoteskip',
-                rank: 'bouncer',
-                type: 'exact',
-                functionality: function (chat, cmd) {
-                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
-                    else {
-                        if (basicBot.settings.voteSkip) {
-                            basicBot.settings.voteSkip = !basicBot.settings.voteSkip;
-                            API.sendChat(subChat(basicBot.chat.toggleoff, {name: chat.un, 'function': basicBot.chat.voteskip}));
-                        }
-                        else {
-                            basicBot.settings.voteSkip = !basicBot.settings.voteSkip;
-                            API.sendChat(subChat(basicBot.chat.toggleon, {name: chat.un, 'function': basicBot.chat.voteskip}));
                         }
                     }
                 }
@@ -3247,29 +3042,6 @@
                 }
             },
 
-            voteskipCommand: {
-                command: 'voteskip',
-                rank: 'manager',
-                type: 'startsWith',
-                functionality: function (chat, cmd) {
-                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
-                    else {
-                        var msg = chat.message;
-                        if (msg.length <= cmd.length + 1) return API.sendChat(subChat(basicBot.chat.voteskiplimit, {name: chat.un, limit: basicBot.settings.voteSkipLimit}));
-                        var argument = msg.substring(cmd.length + 1);
-                        if (!basicBot.settings.voteSkip) basicBot.settings.voteSkip = !basicBot.settings.voteSkip;
-                        if (isNaN(argument)) {
-                            API.sendChat(subChat(basicBot.chat.voteskipinvalidlimit, {name: chat.un}));
-                        }
-                        else {
-                            basicBot.settings.voteSkipLimit = argument;
-                            API.sendChat(subChat(basicBot.chat.voteskipsetlimit, {name: chat.un, limit: basicBot.settings.voteSkipLimit}));
-                        }
-                    }
-                }
-            },
-
             welcomeCommand: {
                 command: 'welcome',
                 rank: 'mod',
@@ -3300,93 +3072,6 @@
                     else {
                         if (typeof basicBot.settings.website === "string")
                             API.sendChat(subChat(basicBot.chat.website, {link: basicBot.settings.website}));
-                    }
-                }
-            },
-
-            whoisCommand: {
-                command: 'whois',
-                rank: 'bouncer',
-                type: 'startsWith',
-                functionality: function (chat, cmd) {
-                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
-                    else {
-                        var msg = chat.message;
-                        var name;
-                        if (msg.length === cmd.length) name = chat.un;
-                        else {
-                            name = msg.substr(cmd.length + 2);
-                        }
-                        users = API.getUsers();
-                        var len = users.length;
-                        for (var i = 0; i < len; ++i){
-                            if (users[i].username == name){
-                                var id = users[i].id;
-                                var avatar = API.getUser(id).avatarID;
-                                var level = API.getUser(id).level;
-                                var rawjoined = API.getUser(id).joined;
-                                var joined = rawjoined.substr(0, 10);
-                                var rawlang = API.getUser(id).language;
-                                if (rawlang == "en"){
-                                    var language = "English";
-                                } else if (rawlang == "bg"){
-                                    var language = "Bulgarian";
-                                } else if (rawlang == "cs"){
-                                    var language = "Czech";
-                                } else if (rawlang == "fi"){
-                                    var language = "Finnish"
-                                } else if (rawlang == "fr"){
-                                    var language = "French"
-                                } else if (rawlang == "pt"){
-                                    var language = "Portuguese"
-                                } else if (rawlang == "zh"){
-                                    var language = "Chinese"
-                                } else if (rawlang == "sk"){
-                                    var language = "Slovak"
-                                } else if (rawlang == "nl"){
-                                    var language = "Dutch"
-                                } else if (rawlang == "ms"){
-                                    var language = "Malay"
-                                }
-                                var rawstatus = API.getUser(id).status;
-                                if (rawstatus == "0"){
-                                    var status = "Available";
-                                } else if (rawstatus == "1"){
-                                    var status = "Away";
-                                } else if (rawstatus == "2"){
-                                    var status = "Working";
-                                } else if (rawstatus == "3"){
-                                    var status = "Gaming"
-                                }
-                                var rawrank = API.getUser(id).role;
-                                if (rawrank == "0"){
-                                    var rank = "User";
-                                } else if (rawrank == "1"){
-                                    var rank = "Resident DJ";
-                                } else if (rawrank == "2"){
-                                    var rank = "Bouncer";
-                                } else if (rawrank == "3"){
-                                    var rank = "Manager"
-                                } else if (rawrank == "4"){
-                                    var rank = "Co-Host"
-                                } else if (rawrank == "5"){
-                                    var rank = "Host"
-                                } else if (rawrank == "7"){
-                                    var rank = "Brand Ambassador"
-                                } else if (rawrank == "10"){
-                                    var rank = "Admin"
-                                }
-                                var slug = API.getUser(id).slug;
-                                if (typeof slug !== 'undefined') {
-                                    var profile = ", Profile: http://plug.dj/@/" + slug;
-                                } else {
-                                    var profile = "";
-                                }
-
-                                API.sendChat(subChat(basicBot.chat.whois, {name1: chat.un, name2: name, id: id, avatar: avatar, profile: profile, language: language, level: level, status: status, joined: joined, rank: rank}));
-                            }
-                        }
                     }
                 }
             },
