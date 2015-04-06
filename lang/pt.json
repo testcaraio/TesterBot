@@ -139,7 +139,7 @@
     "swapinvalid": "/me [@%%NAME%%] Usuário inválido.",
     "swapwlonly": "/me [@%%NAME%%] Use !swap somente com usuários que estão na fila de espera.",
     "swapping": "/me Trocando posições: %%NAME1%% com %%NAME2%%.",
-    "genres": "/me Os generos permitidos são videos de "Zoeira", Poops, MLG's e etc, música somente de madrugada",
+    "genres": "/me Os generos permitidos são videos de 'Zoeira', Poops, MLG's e etc, música somente de madrugada",
     "notbanned": "/me [@%%NAME%%] Usuário mencionado não foi banido para a casa da avó dadeira de cu dele.",
     "unmutedeveryone": "/me [@%%NAME%%] Todos foram desmutados.",
     "unmuteeveryonerank": "/me [@%%NAME%%] Somente Coordenadores podem desmutar todos os usuários de uma vez.",
