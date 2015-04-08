@@ -193,7 +193,7 @@
         settings: {
             botName: "basicBot",
             language: "portuguese",
-            chatLink: "https://rawgit.com/B1G-B0SS/basicBot-1/master/lang/en.json",
+            chatLink: "https://rawgit.com/B1G-B0SS/basicBot-1/master/lang/pt.json",
             startupCap: 1, // 1-200
             startupVolume: 0, // 0-100
             startupEmoji: false, // true or false
