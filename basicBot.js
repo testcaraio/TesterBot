@@ -1567,7 +1567,7 @@
             },
 
             ballCommand: {
-                command: ['8ball', 'ask'],
+                command: ['8ball', 'ask', 'askmiller', 'askprofessor', 'askkazuhira'],
                 rank: 'user',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
@@ -1714,29 +1714,29 @@
             },
 
             cookieCommand: {
-                command: 'cookie',
+                command: ['troll', 'negragem', 'zoeira']
                 rank: 'user',
                 type: 'startsWith',
-                cookies: ['has given you a chocolate chip cookie!',
-                    'has given you a soft homemade oatmeal cookie!',
-                    'has given you a plain, dry, old cookie. It was the last one in the bag. Gross.',
-                    'gives you a sugar cookie. What, no frosting and sprinkles? 0/10 would not touch.',
-                    'gives you a chocolate chip cookie. Oh wait, those are raisins. Bleck!',
-                    'gives you an enormous cookie. Poking it gives you more cookies. Weird.',
-                    'gives you a fortune cookie. It reads "Why aren\'t you working on any projects?"',
-                    'gives you a fortune cookie. It reads "Give that special someone a compliment"',
-                    'gives you a fortune cookie. It reads "Take a risk!"',
-                    'gives you a fortune cookie. It reads "Go outside."',
-                    'gives you a fortune cookie. It reads "Don\'t forget to eat your veggies!"',
-                    'gives you a fortune cookie. It reads "Do you even lift?"',
-                    'gives you a fortune cookie. It reads "m808 pls"',
-                    'gives you a fortune cookie. It reads "If you move your hips, you\'ll get all the ladies."',
-                    'gives you a fortune cookie. It reads "I love you."',
-                    'gives you a Golden Cookie. You can\'t eat it because it is made of gold. Dammit.',
-                    'gives you an Oreo cookie with a glass of milk!',
-                    'gives you a rainbow cookie made with love :heart:',
-                    'gives you an old cookie that was left out in the rain, it\'s moldy.',
-                    'bakes you fresh cookies, it smells amazing.'
+                cookies: ['te deu uma piroka gigantesca e negra!',
+                    'te estuprou com um bastão de baseball sujo de bosta que ele acabou de tirar do cu!',
+                    'te deu um oco profundo que te enviou para outra dimensão.',
+                    'chamou o Jailson para te engolir com o oco.',
+                    'roubou seus pintos de borracha (Aquele vibrador do Kid Bengala que você guarda de baixo da cama também)!',
+                    'te bateu com um pinto de borracha com DST.',
+                    'mandou você ir tomar no cu, FILHO DA PUTA',
+                    'te deu o cu',
+                    'abaixou suas calças e enfiou a piroka no seu cu (Você gostou safadjenho)',
+                    'tirou 8 bolas de boliche do cu para vocês jogarem juntos',
+                    'tirou 2 tacos de sinuca para vocês jogarem juntos',
+                    'pediu para você engravidar ele',
+                    'te chamou para queimar alguns negros',
+                    'te chamou de PSG',
+                    'disse que seu amor não enche barriga, então ele quer ARROZ, FEIJÃO E PIKA',
+                    'te deu um pinto de borracha de ouro de lados duplos, e te chamou para testar o brinquedo novo',
+                    'espalhou para todo mundo que te comeu ontem!',
+                    'espalhou para todo mundo que te deu ontem!',
+                    'disse que você espancou ele com lâmpadas, esse viado',
+                    'sonhou que você comeu o cu dele, até desaparecer.'
                 ],
                 getCookie: function () {
                     var c = Math.floor(Math.random() * this.cookies.length);
