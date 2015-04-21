@@ -87,10 +87,7 @@ Usuario
 |!autowoot | | coloca o link do Origem Woot, o autowoot que recomendamos |
 |!ba | | explica sobre o que é um BA (Nome verde) |
 |!commands | | dá o link dos comandos |
-|!biscoito | @usuario | dá um biscoito ou bolacha para o usuario |
-|!sacanagem | @usuario | sacaneia um usuario |
-|!chantagear | @usuario | chantagueia um usuario |
-|!bater | @usuario | bate em algum usuario |
+|!negragem | @usuario | faz alguma zoeira aleatoria com um usuario |
 |!dclookup / !dc | | usa o dc em si mesmo |
 |!emoji | | coloca o link dos emojis |
 |!eta | | mostra quanto tempo demora para você rodar seu video |
