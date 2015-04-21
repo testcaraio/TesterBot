@@ -1714,7 +1714,7 @@
             },
 
             cookieCommand: {
-                command: ['troll', 'negragem', 'zoeira']
+                command: ['troll', 'negragem', 'zoeira'],
                 rank: 'user',
                 type: 'startsWith',
                 cookies: ['te deu uma piroka gigantesca e negra!',
