@@ -2724,7 +2724,7 @@
             },
 
             rouletteCommand: {
-                command: 'roulette',
+                command: ['roulette', 'roleta', 'rodaroda'],
                 rank: 'manager',
                 type: 'exact',
                 functionality: function (chat, cmd) {
