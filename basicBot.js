@@ -1148,14 +1148,11 @@
                 }
                 basicBot.room.roomstats.chatmessages++;
             },
-            spam: [
-                'hueh', 'hu3', 'brbr', 'heu', 'brbr', 'kkkk', 'spoder', 'mafia', 'zuera', 'zueira',
-                'zueria', 'aehoo', 'aheu', 'alguem', 'algum', 'brazil', 'zoeira', 'fuckadmins', 'affff', 'vaisefoder', 'huenaarea',
-                'hitler', 'ashua', 'ahsu', 'ashau', 'lulz', 'huehue', 'hue', 'huehuehue', 'merda', 'pqp', 'puta', 'mulher', 'pula', 'retarda', 'caralho', 'filha', 'ppk',
-                'gringo', 'fuder', 'foder', 'hua', 'ahue', 'modafuka', 'modafoka', 'mudafuka', 'mudafoka', 'ooooooooooooooo', 'foda'
+            spam:
+                 'pula',
             ],
             curses: [
-                'nigger', 'faggot', 'nigga', 'niqqa', 'motherfucker', 'modafocka'
+                'pulaa',
             ]
         },
         connectAPI: function () {
@@ -1567,7 +1564,7 @@
             },
 
             ballCommand: {
-                command: ['8ball', 'ask', 'askmiller', 'askprofessor', 'askkazuhira'],
+                command: ['8ball', 'ask', 'askmiller', 'professor', 'askkazuhira', 'curso', 'cursinho'],
                 rank: 'user',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
@@ -1586,7 +1583,7 @@
             },
 
             banCommand: {
-                command: 'ban',
+                command: ['ban', 'BANda', 'BANana', 'BANdeira'],
                 rank: 'bouncer',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
