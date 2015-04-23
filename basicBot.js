@@ -1150,7 +1150,7 @@
             },
             spam:
                  'pula',
-            ],
+            ]
             curses: [
                 'pulaa',
             ]
