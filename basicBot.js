@@ -1148,7 +1148,7 @@
                 }
                 basicBot.room.roomstats.chatmessages++;
             },
-            spam:
+            spam: [
                  'pula',
             ]
             curses: [
