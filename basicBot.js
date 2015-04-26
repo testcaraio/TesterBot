@@ -1684,7 +1684,7 @@
             },
 
             clearchatCommand: {
-                command: 'clearchat',
+                command: 'bostejarchat',
                 rank: 'manager',
                 type: 'exact',
                 functionality: function (chat, cmd) {
