@@ -179,7 +179,7 @@
     var botCreatorIDs = ["3851534", "4105209"];
 
     var basicBot = {
-        version: "666",
+        version: "6.6.7",
         status: false,
         name: "basicBot",
         loggedInID: null,
@@ -1567,7 +1567,7 @@
             },
 
             ballCommand: {
-                command: ['8ball', 'ask', 'askmiller', 'professor', 'askkazuhira', 'curso', 'cursinho'],
+                command: ['8ball', 'ask', 'askmiller', 'professor', 'askkazuhira', 'curso', 'cursinho', 'bot'],
                 rank: 'user',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
