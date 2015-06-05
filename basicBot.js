@@ -183,7 +183,7 @@
         status: false,
         name: "basicBot",
         loggedInID: null,
-        scriptLink: "https://rawgit.com/PrincessDie/Exercito-Bot/master/basicBot.js",
+        scriptLink: "https://rawgit.com/PrincessDie/Baladita-Bot/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
         chatLink: "https://rawgit.com/PrincessDie/basicBot-1/master/lang/pt.json",
         chat: null,
