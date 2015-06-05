@@ -54,7 +54,7 @@
     var loadChat = function (cb) {
         if (!cb) cb = function () {
         };
-        $.get("https://rawgit.com/B1G-B0SS/basicBot-1/master/lang/langIndex.json", function (json) {
+        $.get("https://rawgit.com/PrincessDie/basicBot-1/master/lang/langIndex.json", function (json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== "undefined") {
                 langIndex = json;
@@ -183,9 +183,9 @@
         status: false,
         name: "basicBot",
         loggedInID: null,
-        scriptLink: "https://rawgit.com/B1G-B0SS/Exercito-Bot/master/basicBot.js",
+        scriptLink: "https://rawgit.com/PrincessDie/Exercito-Bot/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
-        chatLink: "https://rawgit.com/B1G-B0SS/basicBot-1/master/lang/pt.json",
+        chatLink: "https://rawgit.com/PrincessDie/basicBot-1/master/lang/pt.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
@@ -193,7 +193,7 @@
         settings: {
             botName: "basicBot",
             language: "portuguese",
-            chatLink: "https://rawgit.com/B1G-B0SS/basicBot-1/master/lang/pt.json",
+            chatLink: "https://rawgit.com/PrincessDie/basicBot-1/master/lang/pt.json",
             startupCap: 1, // 1-200
             startupVolume: 0, // 0-100
             startupEmoji: false, // true or false
@@ -218,47 +218,47 @@
             lockskipPosition: 3,
             lockskipReasons: [
                 ["pqs", "Por que eu quis, palhaço. "],
-                ["op", "Esse video é repetido de mais. "],
+                ["op", "Esse video é repetido demais. "],
                 ["history", "Esse video está no historico. "],
                 ["mix", "You played a mix, which is against the rules. "],
                 ["sound", "The song you played had bad sound quality or no sound. "],
-                ["nsfw", "Esse video tem putaria/NSFW, é proibido porra (imagem). "],
+                ["nsfw", "Esse video tem putaria/NSFW, é proibido (imagem). "],
                 ["bug", "Esse video está bugado. "]
             ],
             ball: [
-            "Acho que sim cuzão.",
-            "Sim seu merda.",
-            "Repita isso seu merda.",
-            "Sem duvidas disso delicia.",
-            "Minhas fontes dizem que não porra.",
+            "Acho que sim.",
+            "Sim.",
+            "Repita isso sua kenga.",
+            "Sem dúvidas.",
+            "Minhas fontes dizem que não.",
             "Pelo que eu vejo, sim.",
-            "Depende caraio.",
-            "Se concentre filho da puta, e tente de novo.",
-            "Dependendo da perspectiva não é muito bom carai.",
-            "Isso está decidido já porra.",
-            "Melhor não te contar agora rçrçrçrç.",
-            "Bem duvidoso carai.",
-            "Sim - definitivamente porra.",
-            "Isso é certo seu cuzão.",
-            "Não posso te contar agora rçrçrçrç.",
-            "Provavelmente carai.",
-            "Respondo de novo depois amorzinho <3 se é que você entende.",
-            "Minha resposta é não, seu viado.",
-            "Parece bom porra.",
-            "Melhor não contar com isso heim carai.",
-            "Sim, em seu devido tempo rçrçrçrç.",
+            "Depende.",
+            "Se concentre e tente de novo.",
+            "Dependendo da perspectiva não é muito bom.",
+            "Isso já esta decidido.",
+            "Melhor não te contar agora hahaha.",
+            "Bem duvidoso.",
+            "Sim, definitivamente.",
+            "Isso é fato!",
+            "Não posso te contar agora.",
+            "Provavelmente.",
+            "Respondo de novo depois amorzinho.",
+            "Minha resposta é não.",
+            "Parece bom.",
+            "Melhor não contar com isso, hein?.",
+            "Sim, em seu devido tempo.",
             "Minhas fontes dizem que não para esse inferno.",
-            "Definitivamente não carai.",
-            "Você terá de esperar, seu bosta.",
+            "Definitivamente não.",
+            "Você terá de esperar.",
             "Eu ainda tenho minhas duvidas, mas vai saber.",
-            "Parece que sim porra.",
+            "Parece que sim.",
             "Parece legal para mim!",
             "Quem sabe?",
             "Parece legal!",
             "Provavelmente.",
-            "Cê tá de brincadeira porra??",
-            "Melhor nem saber heim.",
-            "Esqueça isso filho da puta."
+            "Cê tá de brincadeira??",
+            "Melhor nem saber hein.",
+            "Esqueça isso."
             ],
             afkpositionCheck: 15,
             afkRankCheck: "ambassador",
@@ -1567,7 +1567,7 @@
             },
 
             ballCommand: {
-                command: ['8ball', 'ask', 'askmiller', 'professor', 'askkazuhira', 'curso', 'cursinho', 'bot'],
+                command: ['8ball', 'ask'],
                 rank: 'user',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
@@ -1586,7 +1586,7 @@
             },
 
             banCommand: {
-                command: ['ban', 'BANda', 'BANana', 'BANdeira'],
+                command: ['ban'],
                 rank: 'bouncer',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
@@ -1714,29 +1714,29 @@
             },
 
             cookieCommand: {
-                command: ['troll', 'negragem', 'zoeira'],
+                command: ['troll', 'thebosh', 'zoeira'],
                 rank: 'user',
                 type: 'startsWith',
-                cookies: ['te deu uma piroka gigantesca e negra!',
-                    'te estuprou com um bastão de baseball sujo de bosta que ele acabou de tirar do cu!',
-                    'te deu um oco profundo que te enviou para outra dimensão.',
-                    'chamou o Jailson para te engolir com o oco.',
-                    'roubou seus pintos de borracha (Aquele vibrador do Kid Bengala que você guarda de baixo da cama também)!',
-                    'te bateu com um pinto de borracha com DST.',
-                    'mandou você ir tomar no cu, FILHO DA PUTA',
-                    'te deu o cu',
-                    'abaixou suas calças e enfiou a piroka no seu cu (Você gostou safadjenho)',
+                cookies: ['pediu pra você soltar o baseado, bicha!',
+                    'falou que nem com pacto você fica bonita.',
+                    'chamou a Madonna pra sugar sua juventude.',
+                    'chamou a Avril pra sugar sua juventude.',
+                    'ADIDIUÁ PAPAPUM!',
+                    'quer te vender trufa.',
+                    'mandou você ir contar os grammys da Katy Perry',
+                    'te deu o cu.',
+                    'mandou você comprar Pretty Girls no iTunes. BUY PRETTY GIRLS ON ITUNES??',
                     'tirou 8 bolas de boliche do cu para vocês jogarem juntos',
-                    'tirou 2 tacos de sinuca para vocês jogarem juntos',
-                    'pediu para você engravidar ele',
-                    'te chamou para queimar alguns negros',
-                    'te chamou de PSG',
-                    'disse que seu amor não enche barriga, então ele quer ARROZ, FEIJÃO E PIKA',
-                    'te deu um pinto de borracha de ouro de lados duplos, e te chamou para testar o brinquedo novo',
-                    'espalhou para todo mundo que te comeu ontem!',
+                    'disse que você é mais flopado que ARTPOP',
+                    'pediu pra você engravidar ele',
+                    'te chamou de flopado e disse que já pode fazer um álbum jazz',
+                    'please freestyle for us!',
+                    'disse que seu amor não enche barriga, então ele quer ARROZ, FEIJÃO E PICA',
+                    'disse que você ta se achando a rola que matou Cazuza',
+                    'para de tentar fazer o barro acontecer, isso nunca mais pegar.',
                     'espalhou para todo mundo que te deu ontem!',
-                    'disse que você espancou ele com lâmpadas, esse viado',
-                    'sonhou que você comeu o cu dele, até desaparecer.'
+                    'quer criar um álbum jazz com você porque são 2 flopados.',
+                    'disse pra você mandar nudes'
                 ],
                 getCookie: function () {
                     var c = Math.floor(Math.random() * this.cookies.length);
