@@ -331,7 +331,7 @@
             newBlacklisted: [],
             newBlacklistedSongFunction: null,
             roulette: {
-                rouletteStatus: false,
+                rouletteStatus: true,
                 participants: [],
                 countdown: null,
                 startRoulette: function () {
