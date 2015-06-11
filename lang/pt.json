@@ -4,7 +4,7 @@
     "datarestored": "Dados armazenados anteriormente recuperados com êxito.",
     "greyuser": "Apenas Seguranças ou superiores podem usar o bot.",
     "bouncer": "O bot não pode mover pessoas na fila de espera quando usado por um segurança.",
-    "online": "/me %%BOTNAME%% v%%VERSION%% bem finíssimo ativado!",
+    "online": "/me %%BOTNAME%% v%%VERSION%% ativado!",
 
 
     "welcome": "Seja bem-vindo(a), @%%NAME%%, leia nossas regras para não fazer nenhuma besteira [link soon] :sparkling_heart:",
@@ -27,7 +27,7 @@
 
 
     "usernotfound": "/me Usuário não encontrado.",
-    "notdisconnected": "/me @%%NAME%% não saiu enquanto estive frescando aqui.",
+    "notdisconnected": "/me @%%NAME%% não saiu enquanto esteve frescando aqui.",
     "noposition": "/me Última posição não reconhecida. A fila de espera precisa ser atualizada pelo menos uma vez para registrar posições.",
     "toolongago": "/me @%%NAME%% desconectou-se a muito tempo: %%TIME%%, não fode",
     "valid": "/me @%%NAME%% desconectou-se %%TIME%% atrás e deve ter posição %%POSITION%%.",
