@@ -15,7 +15,7 @@
     "isblacklisted": "/me Essa música está na lista negra %%BLACKLIST%%! Pulando música...",
 
 
-    "isopen": "/me Roleta Ativada!! Use !join para participar! Você poderá ser movido para cima ou para baixo na fila.",
+    "isopen": "/me A roleta foi iniciada! Use !join para participar! Você poderá ser movido para cima ou para baixo na fila.",
     "winnerpicked": "/me Um vencedor foi escolhido! @%%NAME%% ganhou a posição %%POSITION%%.",
     
     "ball": "/me A pergunta de %%NAME%% foi: \"%%QUESTION%%\" e a resposta de %%BOTNAME%% é: \"%%RESPONSE%%\"",
