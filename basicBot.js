@@ -2912,15 +2912,15 @@
                         if (p1 < 0 || p2 < 0) return API.sendChat(subChat(basicBot.chat.swapwlonly, {name: chat.un}));
                         API.sendChat(subChat(basicBot.chat.swapping, {'name1': name1, 'name2': name2}));
                         if (p1 < p2) {
-                            basicBot.userUtilities.moveUser(user2.id, p1, false);
+                            basicBot.userUtilities.moveUser(user2.id, p1, true);
                             setTimeout(function (user1, p2) {
-                                basicBot.userUtilities.moveUser(user1.id, p2, false);
+                                basicBot.userUtilities.moveUser(user1.id, p2, true);
                             }, 2000, user1, p2);
                         }
                         else {
-                            basicBot.userUtilities.moveUser(user1.id, p2, false);
+                            basicBot.userUtilities.moveUser(user1.id, p2, true);
                             setTimeout(function (user2, p1) {
-                                basicBot.userUtilities.moveUser(user2.id, p1, false);
+                                basicBot.userUtilities.moveUser(user2.id, p1, true);
                             }, 2000, user2, p1);
                         }
                     }
