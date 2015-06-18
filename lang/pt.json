@@ -7,7 +7,7 @@
     "online": "/me %%BOTNAME%% v%%VERSION%% ativado!",
 
 
-    "welcome": "Seja bem-vindo(a), @%%NAME%%! Leia nossas regras: http://bit.ly/CZRules :sparkling_heart:",
+    "welcome": "Seja bem-vindo(a), @%%NAME%%! Leia nossas regras: http://bit.ly/BPRules",
     "welcomeback": "Seja bem-vindo(a) de volta, @%%NAME%% :purple_heart: :purple_heart:",
     "songknown": "@%%NAME%%, essa música está no histórico, vou pular",
     "timelimit": "@%%NAME%%, sua música tem duração maior que %%MAXLENGTH%% minutos. Você não pode rodar videos longos assim.",
