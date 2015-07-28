@@ -1798,8 +1798,8 @@
                 rank: 'user',
                 type: 'startsWith',
                 getTrans: function () {
-                    var c = Math.floor(Math.random() * this.trans.length);
-                    return this.trans[c];
+                    var c = Math.floor(Math.random() * this.transf.length);
+                    return this.transf[c];
                 },
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
