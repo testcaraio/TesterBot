@@ -224,7 +224,6 @@
                 ["sound", "The song you played had bad sound quality or no sound. "],
                 ["nsfw", "Esse video tem putaria/NSFW, é proibido (imagem). "],
                 ["bug", "Esse video está bugado. "]
-            subirInterval: 10,
             ],
             ball: [
             "Acho que sim.",
@@ -284,7 +283,7 @@
                 OP: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/ExampleOPlist.json"
             }
         },
-        room: { usersUsedSubir: [],
+        room: {
             users: [],
             afkList: [],
             mutedUsers: [],
