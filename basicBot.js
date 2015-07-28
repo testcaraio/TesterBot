@@ -1749,7 +1749,7 @@
                 }
             },
             kissCommand: {
-				command: 'trans',
+				command: 'tog',
 				rank: 'user',
 				type: 'startsWith',
     				kisses: [
@@ -1793,6 +1793,59 @@
 					}
 				}
 			},
+			transCommand: {
+                command: 'trans',
+                rank: 'user',
+                type: 'startsWith',
+                cookies: ['pediu pra você soltar o baseado!',
+                    'falou que nem com pacto você será engraçado.',
+                    'ALLAHU AKBAARR!!!',
+                    'quer te vender trufa.',
+                    'chamou o Jailson para te engolir com o oco',
+                    'te deu o cu.',
+                    'tirou 8 bolas de boliche do cu para vocês jogarem juntos!',
+                    'tirou 2 tacos de sinuca para vocês jogarem juntos!',
+                    'pediu pra você engravidar ele',
+                    'mandou você ir catar coquinho!',
+                    'disse que você só toca vídeo ruim!',
+                    'disse que seu amor não enche barriga, então ele quer ARROZ, FEIJÃO E PICA',
+                    'disse que você ta se achando a rola que matou Cazuza',
+                    'espalhou para todo mundo que te comeu ontem!',
+                    'espalhou para todo mundo que te deu ontem!',
+                    'quer seu corpo nu! :trollface:',
+                    'disse pra você mandar nudes'
+                ],
+                getTrans: function () {
+                    var c = Math.floor(Math.random() * this.trans.length);
+                    return this.trans[c];
+                },
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        var msg = chat.message;
+
+                        var space = msg.indexOf(' ');
+                        if (space === -1) {
+                            API.sendChat(basicBot.chat.trans);
+                            return false;
+                        }
+                        else {
+                            var name = msg.substring(space + 2);
+                            var user = basicBot.userUtilities.lookupUserName(name);
+                            if (user === false || !user.inRoom) {
+                                return API.sendChat(subChat(basicBot.chat.nousertrans, {name: name}));
+                            }
+                            else if (user.username === chat.un) {
+                                return API.sendChat(subChat(basicBot.chat.selftrans, {name: name}));
+                            }
+                            else {
+                                return API.sendChat(subChat(basicBot.chat.transd, {nameto: user.username, namefrom: chat.un, cookie: this.getTrans()}));
+                            }
+                        }
+                    }
+                }
+            },
             cycleCommand: {
                 command: 'cycle',
                 rank: 'manager',
