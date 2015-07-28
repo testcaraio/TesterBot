@@ -1840,7 +1840,7 @@
                                 return API.sendChat(subChat(basicBot.chat.selftrans, {name: name}));
                             }
                             else {
-                                return API.sendChat(subChat(basicBot.chat.transd, {nameto: user.username, namefrom: chat.un, cookie: this.getTrans()}));
+                                return API.sendChat(subChat(basicBot.chat.transd, {nameto: user.username, namefrom: chat.un, trans: this.getTrans()}));
                             }
                         }
                     }
