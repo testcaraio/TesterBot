@@ -1820,7 +1820,7 @@
 				}
 			}
 		}
-	};
+	},
 			transCommand: {
                 command: 'trans',
                 rank: 'user',
