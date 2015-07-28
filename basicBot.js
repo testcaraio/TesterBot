@@ -1749,14 +1749,9 @@
                 }
             },
             kissCommand: {
-				command: ['kiss', 'beijar'],
+				command: 'trans',
 				rank: 'user',
 				type: 'startsWith',
-				kisses: [
-				        "@%%NAMEFROM%%, olha quem tem buceta amor, a @%%NAME%% fez na tailandia",
-				        "@%%NAME%% a @%%NAMEFROM%% disse que você é muito garota",
-				        "@%%NAME%% a @%%NAMEFROM%% pediu pra você mostrar os peito de 10 mil",
-				    ],
 				getKiss: function () {
 					var c = Math.floor(Math.random() * this.kisses.length);
 					return this.kisses[c];
