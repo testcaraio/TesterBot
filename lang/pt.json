@@ -129,7 +129,7 @@
     "trans": "/me ama dar beijos.",
     "nousertrans": "/em Não vejo %%NAME%% na sala. Vou procurar outro pra beijar.",
     "selftrans": "/me @%%NAME%%, você não pode beijar a si mesmo, beije outra pessoa!",
-    "transd": "/me @%%NAMETO%%, %%NAMEFROM%% %%KISS%%",
+    "transd": "/me @%%NAMETO%%, %%NAMEFROM%% %%TRANS%%",
     "cycleguardtime": "/me [@%%NAME%%] A proteção de ciclo agora é: %%TIME%% minuto(s).",
     "dclookuprank": "/me [@%%NAME%%] Somente Seguranças ou superiores podem usar !dclookup em outros usuários.",
     "emojilist": "/me Emojis: %%LINK%%",
