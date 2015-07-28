@@ -1799,6 +1799,12 @@
                 type: 'startsWith',
                 transf: ['disse que você é muito garota',
                     'pediu pra você mostrar os peito',
+                    '< olha quem tem buceta amor, fez na tailândia!',
+                    'disse que você é muito garota',
+                    'pediu pra você mostrar os peito',
+                    '< olha quem tem buceta amor, fez na tailândia!',
+                    'disse que você é muito garota',
+                    'pediu pra você mostrar os peito',
                     '< olha quem tem buceta amor, fez na tailândia!'
                 ],
                 getTrans: function () {
