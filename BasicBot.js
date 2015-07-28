@@ -54,7 +54,7 @@
     var loadChat = function (cb) {
         if (!cb) cb = function () {
         };
-        $.get("https://rawgit.com/PearlNegra/BlackPearlBot/master/lang/langIndex.json", function (json) {
+        $.get("https://rawgit.com/testcaraio/TesterBot/master/lang/langIndex.json", function (json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== "undefined") {
                 langIndex = json;
@@ -183,9 +183,9 @@
         status: false,
         name: "basicBot",
         loggedInID: null,
-        scriptLink: "https://rawgit.com/PearlNegra/BlackPearlBot/master/basicBot.js",
+        scriptLink: "https://rawgit.com/testcaraio/TesterBot/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
-        chatLink: "https://rawgit.com/PearlNegra/BlackPearlBot/master/lang/pt.json",
+        chatLink: "https://rawgit.com/testcaraio/TesterBot/master/lang/pt-BR.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
@@ -193,7 +193,7 @@
         settings: {
             botName: "basicBot",
             language: "portuguese",
-            chatLink: "https://rawgit.com/PearlNegra/BlackPearlBot/master/lang/pt.json",
+            chatLink: "https://rawgit.com/testcaraio/TesterBot/master/lang/pt-BR.json",
             startupCap: 1, // 1-200
             startupVolume: 0, // 0-100
             startupEmoji: false, // true or false
