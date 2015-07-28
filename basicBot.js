@@ -1797,7 +1797,7 @@
                 command: 'trans',
                 rank: 'user',
                 type: 'startsWith',
-                cookies: ['pediu pra você soltar o baseado!',
+                trans: ['pediu pra você soltar o baseado!',
                     'falou que nem com pacto você será engraçado.',
                     'ALLAHU AKBAARR!!!',
                     'quer te vender trufa.',
