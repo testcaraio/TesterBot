@@ -1748,51 +1748,79 @@
                     }
                 }
             },
-            kissCommand: {
-				command: 'tog',
+            subirCommand: {
+				command: 'thor',
 				rank: 'user',
-				type: 'startsWith',
-    				kisses: [
-				        "@${to} você recebeu de ${from} uma cerveja :beer::beers:",
-				        "@${to} você recebeu de ${from} uma cerveja :beer::beers:",
-				        "@${to} você recebeu de ${from} uma cerveja :beer::beers:",
-				        "@${to} você recebeu de ${from} uma cerveja :beer::beers:",
-				        "@${to} você recebeu de ${from} uma cerveja :beer::beers:",
-				        "@${to} você recebeu de ${from} uma cerveja :beer::beers:",
-				        "@${to} você recebeu de ${from} uma cerveja :beer::beers:",
-				        "@${to} você recebeu de ${from} uma cerveja :beer::beers:"
-				    ],
-				getKiss: function () {
-					var c = Math.floor(Math.random() * this.kisses.length);
-					return this.kisses[c];
-				},
+				type: 'exact',
 				functionality: function (chat, cmd) {
-					if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-					if (!basicBot.commands.executable(this.rank, chat)) return void (0);
-					else {
-						var msg = chat.message;
+					if (this.type === 'exact' && chat.message.length !== cmd.length)
+						return void(0);
+					if (basicBot.commands.executable(this.rank, chat)) {
+						var id = chat.uid,
+							isDj = API.getDJ().id == id ? true : false,
+							from = chat.un,
+							djlist = API.getWaitList(),
+							inDjList = false,
+							oldTime = 0,
+							usedSubir = false,
+							indexArrUsedSubir,
+							subirCd = false,
+							timeInMinutes = 0,
+							dignoAlgo = Math.floor(Math.random() * 10) + 1,
+							digno = dignoAlgo == 10 ? true : false;
 
-						var space = msg.indexOf(' ');
-						if (space === -1) {
-							API.sendChat(basicBot.chat.kiss);
-							return false;
+						for (var i = 0; i < djlist.length; i++) {
+							if (djlist[i].id == id)
+								inDjList = true;
 						}
-						else {
-							var name = msg.substring(space + 2);
-							var user = basicBot.userUtilities.lookupUserName(name);
-							if (user === false || !user.inRoom) {
-								return API.sendChat(subChat(basicBot.chat.nouserkiss, {name: name}));
+
+						if (inDjList) {
+							for (var i = 0; i < basicBot.room.usersUsedSubir.length; i++) {
+								if (basicBot.room.usersUsedSubir[i].id == id) {
+									oldTime = basicBot.room.usersUsedSubir[i].time;
+									usedSubir = true;
+									indexArrUsedSubir = i;
+								}
 							}
-							else if (user.username === chat.un) {
-								return API.sendChat(subChat(basicBot.chat.selfkiss, {name: name}));
+
+							if (usedSubir) {
+								timeInMinutes = (basicBot.settings.subirInterval + 1) - (Math.floor((oldTime - Date.now()) * Math.pow(10, -5)) * -1);
+								subirCd = timeInMinutes > 0 ? true : false;
+								if (subirCd == false)
+									basicBot.room.usersUsedSubir.splice(indexArrUsedSubir, 1);
 							}
-							else {
-								return API.sendChat(subChat(basicBot.chat.kissed, {nameto: user.username, namefrom: chat.un, kiss: this.getKiss()}));
+
+							if (subirCd == false || usedSubir == false) {
+								var user = {id: id, time: Date.now()};
+								basicBot.room.usersUsedSubir.push(user);
 							}
 						}
+
+						if (isDj && digno == true) {
+							return API.sendChat(subChat(basicBot.chat.subirdigno, {name: from}));
+						} else if (isDj && digno == false) {
+							API.moderateForceSkip();
+							return API.sendChat(subChat(basicBot.chat.subirndigno, {name: from}));
+						} else if (!inDjList) {
+							return API.sendChat(subChat(basicBot.chat.subirnemperto, {name: from}));
+						} else if (subirCd) {
+							return API.sendChat(subChat(basicBot.chat.subircd, {name: from, time: timeInMinutes}));
+						}
+
+						if (digno) {
+							basicBot.userUtilities.moveUser(id, 1, false);
+							return API.sendChat(subChat(basicBot.chat.subirdigno, {name: from}));
+						} else {
+							basicBot.userUtilities.moveUser(id, djlist.length, false);
+							return API.sendChat(subChat(basicBot.chat.subirndigno, {name: from}));
+						}
+					} else {
+						return void(0);
 					}
 				}
-			},
+			}
+		}
+	};
 			transCommand: {
                 command: 'trans',
                 rank: 'user',
