@@ -1752,6 +1752,16 @@
 				command: 'trans',
 				rank: 'user',
 				type: 'startsWith',
+    				kisses: [
+				        "deu-lhe um beijo bem gostoso.",
+				        "deu-lhe um xero.",
+				        "deu-lhe uma beijoca.",
+				        "deu-lhe um amasso.",
+				        "deu-lhe um beijo e disse \"Eu te amo\"!",
+				        "deu-lhe um abraço e disse \"N\u00e3o me solta\"!",
+				        "deu-lhe um beijo e disse \"Namora comigo\"!",
+				        "deu-lhe um beijo e gritou \"EU TE AMO\"!"
+				    ],
 				getKiss: function () {
 					var c = Math.floor(Math.random() * this.kisses.length);
 					return this.kisses[c];
