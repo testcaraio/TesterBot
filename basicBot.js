@@ -200,7 +200,6 @@
             maximumAfk: 60,
             afkRemoval: false,
             maximumDc: 30,
-            subirInterval: 10,
             bouncerPlus: true,
             blacklistEnabled: true,
             lockdownEnabled: false,
@@ -225,6 +224,7 @@
                 ["sound", "The song you played had bad sound quality or no sound. "],
                 ["nsfw", "Esse video tem putaria/NSFW, é proibido (imagem). "],
                 ["bug", "Esse video está bugado. "]
+            subirInterval: 10,
             ],
             ball: [
             "Acho que sim.",
@@ -284,12 +284,11 @@
                 OP: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/ExampleOPlist.json"
             }
         },
-        room: {
+        room: { usersUsedSubir: [],
             users: [],
             afkList: [],
             mutedUsers: [],
             bannedUsers: [],
-            usersUsedSubir: [],
             skippable: true,
             usercommand: true,
             allcommand: true,
